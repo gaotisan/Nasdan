@@ -1,0 +1,8 @@
+c:\Users\santiago.ochoa\IA\Nasdan\bin\Debug\netcoreapp1.1\Nasdan.deps.json
+c:\Users\santiago.ochoa\IA\Nasdan\bin\Debug\netcoreapp1.1\Nasdan.runtimeconfig.json
+c:\Users\santiago.ochoa\IA\Nasdan\bin\Debug\netcoreapp1.1\Nasdan.runtimeconfig.dev.json
+c:\Users\santiago.ochoa\IA\Nasdan\bin\Debug\netcoreapp1.1\Nasdan.dll
+c:\Users\santiago.ochoa\IA\Nasdan\bin\Debug\netcoreapp1.1\Nasdan.pdb
+c:\Users\santiago.ochoa\IA\Nasdan\obj\Debug\netcoreapp1.1\Nasdan.AssemblyInfo.cs
+c:\Users\santiago.ochoa\IA\Nasdan\obj\Debug\netcoreapp1.1\Nasdan.dll
+c:\Users\santiago.ochoa\IA\Nasdan\obj\Debug\netcoreapp1.1\Nasdan.pdb
