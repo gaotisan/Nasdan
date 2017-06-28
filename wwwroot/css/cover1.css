@@ -6,17 +6,18 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #222;
 }
 
 /* Custom default button */
+
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #252830;
+  color: #fff;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #222;
+  border: 1px solid #222;
 }
 
 
@@ -27,12 +28,12 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #252830;
+  background-color: #fff;
 }
 body {
-  color: #fff;
+  color: #222;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -77,8 +78,8 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #222; /* IE8 proofing */
-  color: rgba(20,20,20,.75);
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
@@ -122,8 +123,8 @@ body {
  */
 
 .mastfoot {
-  color: #222; /* IE8 proofing */
-  color: rgba(20,20,20,.5);
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
 }
 
 
