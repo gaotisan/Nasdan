@@ -27,6 +27,20 @@ namespace Nasdan.Controllers
             return View();
         }
 
+        public IActionResult Autor()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+        public IActionResult Blog()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View();
