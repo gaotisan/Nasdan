@@ -4,61 +4,55 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
-    <environment names="Development">
+     <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap core CSS -->
+     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />        
-        <link rel="stylesheet" href="~/css/cover.css">
+        <link rel="stylesheet" href="~/css/blog.css">
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />        
-        <link rel="stylesheet" href="~/css/cover.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/blog.min.css" asp-append-version="true" />
     </environment>         
   </head>
 
   <body>
-    
-    <div class="site-wrapper">
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">             
-              <h3 class="masthead-brand"><img src="~/images/logo-nasdan-transparent.png" width="80px" height="80px" />Nasdan</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a asp-area="" asp-controller="Home" asp-action="Index">IA (v1.0)</a></li>
-                  <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog</a></li>
-                  <li  class="active"><a asp-area="" asp-controller="Home" asp-action="Autor">Autor</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
-          <div class="inner cover">
-                @RenderBody()            
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Nasdan project by <a href="https://www.linkedin.com/in/santiago-ochoa-ceresuela-67930b38/" target="_blank">Gaotisan</a></p>
-            </div>
-          </div>
-
+    <div class="blog-masthead">
+      <div class="container">
+          <div class="navbar-header">
+          <h2 class="masthead-brand" style="color:white"><img src="~/images/logo-nasdan-transparent2.png" width="80px" height="80px" />Nasdan</h2>
         </div>
-
+           
+        <nav class="blog-nav navbar-right">
+          <a class="blog-nav-item  @ViewData["IAActive"]" href="/IA" style="font-size: 18pt">IA</a>
+          <a class="blog-nav-item @ViewData["BlogActive"]" href="/Blog" style=" font-size:18pt">Blog</a>
+        </nav>
       </div>
-
     </div>
+    
+    <div class="container">      
+        @RenderBody()            
+    </div>
+        
 
+    <footer class="blog-footer">
+      <p>© @DateTime.Now.Year Nasdan project by <a href="https://www.linkedin.com/in/santiago-ochoa-ceresuela-67930b38/" target="_blank">Gaotisan</a></p>
+      <p>
+        <!--<a href="#">Back to top</a>-->
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -81,5 +75,7 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+    
   </body>
 </html>
+

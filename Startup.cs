@@ -53,7 +53,7 @@ namespace Nasdan
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=IA}/{action=Index}/{id?}");
             });
         }
     }
