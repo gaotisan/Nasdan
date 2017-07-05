@@ -365,3 +365,15 @@ Storage files: (filename : modification date - size)
 2017-07-05 10:40:42.611+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'wwwroot' which belongs to the store was deleted while database was running.
 2017-07-05 10:41:07.735+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'src' which belongs to the store was deleted while database was running.
 2017-07-05 10:41:20.573+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Nueva carpeta' which belongs to the store was deleted while database was running.
+2017-07-05 11:19:55.897+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Shutdown started
+2017-07-05 11:19:55.902+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Database is now unavailable
+2017-07-05 11:19:55.916+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [1]:  Starting check pointing...
+2017-07-05 11:19:55.920+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [1]:  Starting store flush...
+2017-07-05 11:19:55.930+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [1]:  Store flush completed
+2017-07-05 11:19:55.934+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [1]:  Starting appending check point entry into the tx log...
+2017-07-05 11:19:55.942+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [1]:  Appending check point entry into the tx log completed
+2017-07-05 11:19:55.946+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [1]:  Check pointing completed
+2017-07-05 11:19:55.952+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-07-05 11:19:55.956+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-07-05 11:19:56.128+0000 INFO [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics START ---
+2017-07-05 11:19:56.128+0000 INFO [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics END ---
