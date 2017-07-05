@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "IA";    
+}
+<div class="container">   
+    <ul class="nav nav-tabs" style="margin-top: 5px;">
+        <li class="nav active"><a href="#Seeing" data-toggle="tab">Seeing</a></li>
+        <li class="nav"><a href="#Terminal" data-toggle="tab">Terminal</a></li>
+        <li class="nav"><a href="#Learning" data-toggle="tab">Learning</a></li>
+        <li class="nav"><a href="#Monitoring" data-toggle="tab">Monitoring</a></li>        
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="Seeing">
+            <!-- Seeing -->
+            <div class="panel panel-default" style="margin-top: 20px">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Input</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <button style="width: 98px; height: 98px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-black.gif">
+                                    </button>
+                                    <button style="width: 98px; height: 98px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-white.gif">
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-red.gif">
+                                    </button>
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-green.gif">
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-blue.gif">
+                                    </button>
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-orange.gif">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row" style="margin-top: 5px;">                                          
+                                        <button id="send1" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;Send View 1!
+                                    </button>
+                                        <button id="clean1" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;&nbsp;Clean 1&2
+                                    </button>
+                                </div>   
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row" style="margin-top: 5px;">                                          
+                                    <button id="send2" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;Send View 1&2!
+                                    </button>
+                                    <button id="clean2" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;&nbsp;Clean 2
+                                    </button>
+                                </div>                            
+                            </div>
+                        </div>                    
+                    </div>
+                </div>            
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Output</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>    
+            <!-- End Seeing -->
+        </div>
+        <div class="tab-pane fade" id="Terminal">Content inside tab B</div>
+        <div class="tab-pane fade" id="Learning">Content inside tab C</div>
+        <div class="tab-pane fade" id="Monitoring">Content inside tab C</div>
+    </div>
+</div>
+
+   
