@@ -14,7 +14,7 @@ $('.nav-tabs a').click(function (e) {
 
 $('.btn-input').click(function(e){
   $('.btn-input').removeClass('active');
-  $('.img-before.no-clicked').attr("src", "../../images/image-background-before-click-me.gif");
+  $('.img-before.no-clicked').attr("src", "../../images/image-background-before-center.gif");
 });
 
 $('.img-before').click(function(e){
@@ -22,7 +22,7 @@ $('.img-before').click(function(e){
   $(this).attr("src",$img.attr('src'));
   $(this).removeClass('no-clicked');
   $(this).addClass('clicked');
-  $('.img-after.no-clicked').attr("src", "../../images/image-background-after-click-me.gif");
+  $('.img-after.no-clicked').attr("src", "../../images/image-background-after-center.gif");
   $('#clean1').prop('disabled', false);
   $('#send1').prop('disabled', false);
 });
@@ -37,8 +37,8 @@ $('.img-after').click(function(e){
 });
 
 $('#clean1').click(function(e){
-   $('.img-before').attr("src", "../../images/image-background-before-click-me.gif");
-   $('.img-after').attr("src", "../../images/image-background-after.gif");
+   $('.img-before').attr("src", "../../images/image-background-before-center.gif");
+   $('.img-after').attr("src", "../../images/image-background.gif");
    $('.img-before').removeClass('clicked');
    $('.img-before').addClass('no-clicked');
    $('.img-after').removeClass('clicked');
@@ -50,7 +50,7 @@ $('#clean1').click(function(e){
 });
 
 $('#clean2').click(function(e){  
-   $('.img-after.clicked').attr("src", "../../images/image-background-after-click-me.gif");
+   $('.img-after.clicked').attr("src", "../../images/image-background-after-center.gif");
    $('.img-after').removeClass('clicked');
    $('.img-after').addClass('no-clicked');
    $('#clean2').prop('disabled', true);
