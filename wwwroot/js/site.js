@@ -1,10 +1,14 @@
 ﻿// Write your Javascript code.
 $(document)
   .ajaxStart(function () {
-    $loading.show();
+     $('#wait-modal').modal('hide');
   })
   .ajaxStop(function () {
-    $loading.hide();
+    $('#wait-modal').modal('hide');
+});
+
+$( document ).ready(function() {
+  $('#wait-modal').modal('hide');
 });
 
 $('.nav-tabs a').click(function (e) {
