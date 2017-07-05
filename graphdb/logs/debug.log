@@ -347,3 +347,21 @@ Storage files: (filename : modification date - size)
 2017-07-05 09:58:30.145+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 332ms.
 2017-07-05 09:58:31.404+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED START ---
 2017-07-05 09:58:33.996+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
+2017-07-05 10:39:48.059+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Nueva carpeta' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:11.223+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] '.vscode' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:11.235+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'bin' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:11.241+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Controllers' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:12.249+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'obj' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:12.254+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Views' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.272+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] '.bowerrc' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.279+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'appsettings.Development.json' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.292+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'appsettings.json' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.301+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'bower.json' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.309+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'bundleconfig.json' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.316+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Nasdan.csproj' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.324+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Program.cs' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.328+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'README.md' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:13.333+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Startup.cs' which belongs to the store was deleted while database was running.
+2017-07-05 10:40:42.611+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'wwwroot' which belongs to the store was deleted while database was running.
+2017-07-05 10:41:07.735+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'src' which belongs to the store was deleted while database was running.
+2017-07-05 10:41:20.573+0000 ERROR [o.n.k.i.u.w.DefaultFileDeletionEventListener] 'Nueva carpeta' which belongs to the store was deleted while database was running.
