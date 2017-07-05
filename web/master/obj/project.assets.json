@@ -9614,16 +9614,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\Nasdan.csproj",
+      "projectUniqueName": "C:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\master\\Nasdan.csproj",
       "projectName": "Nasdan",
-      "projectPath": "c:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\Nasdan.csproj",
-      "outputPath": "c:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\obj\\",
+      "projectPath": "C:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\master\\Nasdan.csproj",
+      "outputPath": "C:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\master\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/Nasdan.dll": "c:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\bin\\placeholder\\netcoreapp1.1\\Nasdan.dll"
+        "lib/netcoreapp1.1/Nasdan.dll": "C:\\Users\\santiago.ochoa\\Desktop\\Nasdan\\web\\master\\bin\\placeholder\\netcoreapp1.1\\Nasdan.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

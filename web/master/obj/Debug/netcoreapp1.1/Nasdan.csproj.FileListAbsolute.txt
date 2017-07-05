@@ -30,3 +30,11 @@ c:\Users\santiago.ochoa\Desktop\Nasdan\web\bin\Debug\netcoreapp1.1\Nasdan.pdb
 c:\Users\santiago.ochoa\Desktop\Nasdan\web\obj\Debug\netcoreapp1.1\Nasdan.AssemblyInfo.cs
 c:\Users\santiago.ochoa\Desktop\Nasdan\web\obj\Debug\netcoreapp1.1\Nasdan.dll
 c:\Users\santiago.ochoa\Desktop\Nasdan\web\obj\Debug\netcoreapp1.1\Nasdan.pdb
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\bin\Debug\netcoreapp1.1\Nasdan.deps.json
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\bin\Debug\netcoreapp1.1\Nasdan.runtimeconfig.json
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\bin\Debug\netcoreapp1.1\Nasdan.runtimeconfig.dev.json
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\bin\Debug\netcoreapp1.1\Nasdan.dll
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\bin\Debug\netcoreapp1.1\Nasdan.pdb
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\obj\Debug\netcoreapp1.1\Nasdan.AssemblyInfo.cs
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\obj\Debug\netcoreapp1.1\Nasdan.dll
+C:\Users\santiago.ochoa\Desktop\Nasdan\web\master\obj\Debug\netcoreapp1.1\Nasdan.pdb

@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/web/Nasdan.csproj"
+                "${workspaceRoot}/Nasdan.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
