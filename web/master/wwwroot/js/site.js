@@ -9,6 +9,7 @@ $(document)
 
 $( document ).ready(function() {
   $('#wait-modal').modal('hide');
+  $('.dropdown-toggle').dropdown();
 });
 
 $('.nav-tabs a').click(function (e) {
