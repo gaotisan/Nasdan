@@ -25,13 +25,15 @@ $('.btn-input').click(function(e){
 
 $('.img-before').click(function(e){
   $img = $('.btn-input.active').find('img');
-  $(this).attr("src",$img.attr('src'));
-  $(this).removeClass('no-clicked');
-  $(this).addClass('clicked');
-  $('.img-after.no-clicked').attr("src", "../../images/image-background-after-center.gif");
-  $('.img-after.no-clicked').removeClass('disabled');
-  $('#clean1').prop('disabled', false);
-  $('#send1').prop('disabled', false);
+  if ($img.length == 1){
+    $(this).attr("src",$img.attr('src'));
+    $(this).removeClass('no-clicked');
+    $(this).addClass('clicked');
+    $('.img-after.no-clicked').attr("src", "../../images/image-background-after-center.gif");
+    $('.img-after.no-clicked').removeClass('disabled');
+    $('#clean1').prop('disabled', false);
+    $('#send1').prop('disabled', false);
+  }
 });
 
 $('.img-after').click(function(e){
