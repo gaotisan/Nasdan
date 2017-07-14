@@ -12,6 +12,10 @@ namespace Nasdan.Controllers
         {            
             ViewData["IAActive"] = "active";
             ViewData["BlogActive"] = "";
+            //var h = new library.Hello();
+            //var t = h.GetTomHanks();
+            var r = new library.Test();
+            var tom = r.GetTomHanks();
             return View();
         }
 

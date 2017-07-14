@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "1acdd7288bc65074e564e32de72b70e5462ff3be"
+    "signature": "e8c3cf3d9a8e00b062d90cd2e9531381a5ccc3a8"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,8 @@
           "Microsoft.AspNetCore.StaticFiles": "1.1.2",
           "Microsoft.Extensions.Logging.Debug": "1.1.2",
           "Microsoft.NETCore.App": "1.1.1",
-          "Microsoft.VisualStudio.Web.BrowserLink": "1.1.2"
+          "Microsoft.VisualStudio.Web.BrowserLink": "1.1.2",
+          "library": "1.0.0"
         },
         "runtime": {
           "Nasdan.dll": {}
@@ -1085,6 +1086,43 @@
           "lib/netstandard1.5/Microsoft.VisualStudio.Web.BrowserLink.dll": {}
         }
       },
+      "neo4jclient/2.0.0.8": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.VisualBasic": "10.1.0",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Collections": "4.3.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Net.Primitives": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Neo4jClient.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/Neo4jClient.dll": {}
+        }
+      },
       "newtonsoft.json/9.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
@@ -1115,6 +1153,23 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "orientdb.net.core/0.1.16": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/OrientDB.Net.Core.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/OrientDB.Net.Core.dll": {}
         }
       },
       "system.collections.nongeneric/4.3.0": {
@@ -1277,6 +1332,19 @@
         },
         "compile": {
           "lib/netstandard1.0/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "library/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Neo4jClient": "2.0.0.8",
+          "OrientDB.Net.Core": "0.1.16"
+        },
+        "runtime": {
+          "library.dll": {}
+        },
+        "compile": {
+          "library.dll": {}
         }
       },
       "libuv/1.9.1": {
@@ -3437,12 +3505,26 @@
       "path": "microsoft.visualstudio.web.browserlink/1.1.2",
       "hashPath": "microsoft.visualstudio.web.browserlink.1.1.2.nupkg.sha512"
     },
+    "neo4jclient/2.0.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-76N9LeRRe6QAwYONimBC3u4S0/ABNCebBKZe/H3KpJ8lrYDVP04R8bdlzO4RVryAhGc8qHN7y+9ndyx51y1JZg==",
+      "path": "neo4jclient/2.0.0.8",
+      "hashPath": "neo4jclient.2.0.0.8.nupkg.sha512"
+    },
     "newtonsoft.json/9.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-74pZyhmQg5Y3X/+svub4NepgLOZV6o2HxoArDaWfY9Sec346kCOeHT6TDOuuYTf3/1SNI/cJ0+VVoobGfQ98PA==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "orientdb.net.core/0.1.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tRDVuvtd9CmHPDaTu6VOFhlFUIgZoVQxfMWhAliDcfmrCKFIGzxlbjtNkHl2GN5N67P6uH0uqpDrX9MLa5RsdA==",
+      "path": "orientdb.net.core/0.1.16",
+      "hashPath": "orientdb.net.core.0.1.16.nupkg.sha512"
     },
     "system.collections.nongeneric/4.3.0": {
       "type": "package",
@@ -3520,6 +3602,11 @@
       "sha512": "sha512-tcfPv+q/nK+5EsAxCLauIOd0kL+lZsXQ4lPKRnh8ex6O1Rm8WAN3LtF2GDFHyD0glSmUpIrgTnLhHCkMAKo3Ug==",
       "path": "system.text.encodings.web/4.3.1",
       "hashPath": "system.text.encodings.web.4.3.1.nupkg.sha512"
+    },
+    "library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "libuv/1.9.1": {
       "type": "package",

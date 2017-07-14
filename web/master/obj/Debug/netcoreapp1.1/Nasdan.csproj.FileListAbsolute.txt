@@ -46,3 +46,5 @@ C:/Users/santiago.ochoa/Desktop/Nasdan/web/master/obj/Debug/netcoreapp1.1/Nasdan
 /Users/Santi/Desktop/Nasdan/web/master/obj/Debug/netcoreapp1.1/Nasdan.AssemblyInfo.cs
 /Users/Santi/Desktop/Nasdan/web/master/obj/Debug/netcoreapp1.1/Nasdan.dll
 /Users/Santi/Desktop/Nasdan/web/master/obj/Debug/netcoreapp1.1/Nasdan.pdb
+/Users/Santi/Desktop/Nasdan/web/master/bin/Debug/netcoreapp1.1/library.dll
+/Users/Santi/Desktop/Nasdan/web/master/bin/Debug/netcoreapp1.1/library.pdb
