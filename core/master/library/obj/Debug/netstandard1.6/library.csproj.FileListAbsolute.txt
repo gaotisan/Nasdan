@@ -1,0 +1,6 @@
+/Users/Santi/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/library.deps.json
+/Users/Santi/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/library.dll
+/Users/Santi/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/library.pdb
+/Users/Santi/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/library.AssemblyInfo.cs
+/Users/Santi/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/library.dll
+/Users/Santi/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/library.pdb
