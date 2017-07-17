@@ -14,7 +14,7 @@
           "OrientDB.Net.Core": "0.1.16"
         },
         "runtime": {
-          "library.dll": {}
+          "Library.dll": {}
         }
       },
       "microsoft.csharp/4.0.1": {

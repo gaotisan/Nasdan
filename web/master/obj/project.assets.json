@@ -706,6 +706,20 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
         }
       },
+      "Microsoft.AspNetCore.WebSockets/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
+          "Microsoft.Extensions.Options": "1.1.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.WebSockets.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.WebSockets.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.WebUtilities/1.1.2": {
         "type": "package",
         "dependencies": {
@@ -3617,7 +3631,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "library/1.0.0": {
+      "Library/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
@@ -3626,10 +3640,10 @@
           "OrientDB.Net.Core": "0.1.16"
         },
         "compile": {
-          "bin/placeholder/netstandard1.6/library.dll": {}
+          "bin/placeholder/netstandard1.6/Library.dll": {}
         },
         "runtime": {
-          "bin/placeholder/netstandard1.6/library.dll": {}
+          "bin/placeholder/netstandard1.6/Library.dll": {}
         }
       }
     }
@@ -4165,6 +4179,19 @@
         "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.xml",
         "microsoft.aspnetcore.staticfiles.1.1.2.nupkg.sha512",
         "microsoft.aspnetcore.staticfiles.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.WebSockets/1.0.2": {
+      "sha512": "xwMj1n1QFfeEkjnOUW/PV6DkQSjC+SrJOaJpgXsY+bBDNVA8bpR6aHP/DzZvtJuxEpiWu4VmOoE1xSxjD5ShyA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.websockets/1.0.2",
+      "files": [
+        "lib/net451/Microsoft.AspNetCore.WebSockets.dll",
+        "lib/net451/Microsoft.AspNetCore.WebSockets.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.WebSockets.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.WebSockets.xml",
+        "microsoft.aspnetcore.websockets.1.0.2.nupkg.sha512",
+        "microsoft.aspnetcore.websockets.nuspec"
       ]
     },
     "Microsoft.AspNetCore.WebUtilities/1.1.2": {
@@ -9734,21 +9761,22 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "library/1.0.0": {
+    "Library/1.0.0": {
       "type": "project",
-      "path": "../../core/master/library/library.csproj",
-      "msbuildProject": "../../core/master/library/library.csproj"
+      "path": "../../core/master/library/Library.csproj",
+      "msbuildProject": "../../core/master/library/Library.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "Library >= 1.0.0",
       "Microsoft.AspNetCore >= 1.1.2",
       "Microsoft.AspNetCore.Mvc >= 1.1.3",
       "Microsoft.AspNetCore.StaticFiles >= 1.1.2",
+      "Microsoft.AspNetCore.WebSockets >= 1.0.2",
       "Microsoft.Extensions.Logging.Debug >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.1",
-      "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.2",
-      "library >= 1.0.0"
+      "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.2"
     ]
   },
   "packageFolders": {
@@ -9771,8 +9799,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "/Users/Santi/Desktop/Nasdan/core/master/library/library.csproj": {
-              "projectPath": "/Users/Santi/Desktop/Nasdan/core/master/library/library.csproj"
+            "/Users/Santi/Desktop/Nasdan/core/master/library/Library.csproj": {
+              "projectPath": "/Users/Santi/Desktop/Nasdan/core/master/library/Library.csproj"
             }
           }
         }
@@ -9804,6 +9832,10 @@
           "Microsoft.VisualStudio.Web.BrowserLink": {
             "target": "Package",
             "version": "1.1.2"
+          },
+          "Microsoft.AspNetCore.WebSockets": {
+            "target": "Package",
+            "version": "1.0.2"
           }
         }
       }

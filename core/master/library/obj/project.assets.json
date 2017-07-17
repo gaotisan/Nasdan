@@ -5214,16 +5214,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Santi/Desktop/Nasdan/core/master/library/library.csproj",
-      "projectName": "library",
-      "projectPath": "/Users/Santi/Desktop/Nasdan/core/master/library/library.csproj",
+      "projectUniqueName": "/Users/Santi/Desktop/Nasdan/core/master/library/Library.csproj",
+      "projectName": "Library",
+      "projectPath": "/Users/Santi/Desktop/Nasdan/core/master/library/Library.csproj",
       "outputPath": "/Users/Santi/Desktop/Nasdan/core/master/library/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.6"
       ],
       "files": {
-        "lib/netstandard1.6/library.dll": "/Users/Santi/Desktop/Nasdan/core/master/library/bin/placeholder/netstandard1.6/library.dll"
+        "lib/netstandard1.6/Library.dll": "/Users/Santi/Desktop/Nasdan/core/master/library/bin/placeholder/netstandard1.6/Library.dll"
       },
       "frameworks": {
         "netstandard1.6": {
