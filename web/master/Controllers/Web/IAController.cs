@@ -14,8 +14,8 @@ namespace Nasdan.Controllers.Web
             ViewData["BlogActive"] = "";
             //var h = new library.Hello();
             //var t = h.GetTomHanks();
-            var r = new library.Test();
-            var tom = r.GetTomHanks();
+            //var r = new library.Test();
+            //var tom = r.GetTomHanks();
             return View();
         }
 
