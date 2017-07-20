@@ -1,0 +1,6 @@
+/Users/Santi/Desktop/Nasdan/core/master/bin/Debug/netstandard1.6/Nasdan-core.deps.json
+/Users/Santi/Desktop/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.AssemblyInfo.cs
+/Users/Santi/Desktop/Nasdan/core/master/bin/Debug/netstandard1.6/Nasdan-core.dll
+/Users/Santi/Desktop/Nasdan/core/master/bin/Debug/netstandard1.6/Nasdan-core.pdb
+/Users/Santi/Desktop/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.dll
+/Users/Santi/Desktop/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.pdb

@@ -1,0 +1,222 @@
+﻿@{
+    ViewData["Title"] = "IA";    
+}
+<div class="container">   
+    <ul class="nav nav-tabs" style="margin-top: 5px;">
+        <li class="nav active"><a href="#Seeing" data-toggle="tab">Seeing</a></li>
+        <li class="nav"><a href="#Terminal" data-toggle="tab">Terminal</a></li>        
+        <li class="nav"><a href="#Monitoring" data-toggle="tab">Monitoring</a></li>        
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="Seeing">
+            <!-- Seeing -->
+            <div class="panel panel-default" style="margin-top: 20px">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Input</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div clss="row">
+                                    <select style="width: 170px;">
+                                        <option>Colors</option>
+                                        <option>Shapes</option>
+                                        <option>Textures</option>
+                                    </select>
+                                </div>
+                                <div class="row" style="margin-top: 10px">
+                                    <button style="width: 98px; height: 98px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-black.gif">
+                                    </button>
+                                    <button style="width: 98px; height: 98px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-white.gif">
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-red.gif">
+                                    </button>
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-green.gif">
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-blue.gif">
+                                    </button>
+                                    <button style="width: 98px; height: 98px; margin-top: 3px; padding: 0px 0px 0px 0px;" type="button" class="btn btn-default btn-input" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        <img style="width: 85px; height: 85px;" src="~/images/inputs/colors-orange.gif">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-before no-clicked disabled" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row" style="margin-top: 5px;">                                          
+                                        <button id="send1" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;Send View 1!
+                                    </button>
+                                        <button id="clean1" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;&nbsp;Clean 1&2
+                                    </button>
+                                </div>   
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                    <img style="width: 100px; height: 100px;" alt="100x100" class="img-thumbnail img-after no-clicked disabled" src="~/images/image-background.gif">
+                                </div>
+                                <div class="row" style="margin-top: 5px;">                                          
+                                    <button id="send2" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;Send View 1&2!
+                                    </button>
+                                    <button id="clean2" type="button" class="btn btn-default btn-lg" disabled>
+                                        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;&nbsp;Clean 2
+                                    </button>
+                                </div>                            
+                            </div>
+                        </div>                    
+                    </div>
+                </div>            
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Output</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>    
+            <!-- End Seeing -->
+        </div>
+        <div class="tab-pane fade" id="Terminal">
+            <!-- Terminal -->
+            <div class="row chat-window " id="chat_window_1" style="margin-left:0px;">
+                <div class="col-xs-12 col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading top-bar">
+                            <div class="col-md-8 col-xs-8">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat - Nasdan</h3>
+                            </div>
+                            <div class="col-md-4 col-xs-4" style="text-align: right;">
+                                <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                            </div>
+                        </div>
+                        <div class="panel-body msg_container_base">
+                            <div class="row msg_container base_sent">
+                                <div class="col-md-10 col-xs-10">
+                                    <div class="messages msg_sent">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                            </div>
+                            <div class="row msg_container base_receive">
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="~/images/hal.jpg" class=" img-responsive ">
+                                </div>
+                                <div class="col-md-10 col-xs-10">
+                                    <div class="messages msg_receive">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row msg_container base_receive">
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                                <div class="col-xs-10 col-md-10">
+                                    <div class="messages msg_receive">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row msg_container base_sent">
+                                <div class="col-xs-10 col-md-10">
+                                    <div class="messages msg_sent">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                            </div>
+                            <div class="row msg_container base_receive">
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                                <div class="col-xs-10 col-md-10">
+                                    <div class="messages msg_receive">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row msg_container base_sent">
+                                <div class="col-md-10 col-xs-10 ">
+                                    <div class="messages msg_sent">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+                                <span class="input-group-btn">
+                                <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <!-- End Terminal -->
+        </div>       
+        <div class="tab-pane fade" id="Monitoring">Content inside tab C</div>
+    </div>
+</div>
+
+   

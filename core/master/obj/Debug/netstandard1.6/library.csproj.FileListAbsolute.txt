@@ -1,0 +1,12 @@
+C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/library.deps.json
+C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/library.dll
+C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/library.pdb
+C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/library.AssemblyInfo.cs
+C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/library.dll
+C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/library.pdb
+/Users/Santi/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/Library.deps.json
+/Users/Santi/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/Library.dll
+/Users/Santi/Desktop/Nasdan/core/master/library/bin/Debug/netstandard1.6/Library.pdb
+/Users/Santi/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/Library.AssemblyInfo.cs
+/Users/Santi/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/Library.dll
+/Users/Santi/Desktop/Nasdan/core/master/library/obj/Debug/netstandard1.6/Library.pdb
