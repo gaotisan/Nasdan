@@ -2,6 +2,31 @@
   "version": 2,
   "targets": {
     ".NETStandard,Version=v1.6": {
+      "Google.Protobuf/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -27,6 +52,18 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -203,6 +240,34 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Proto.Actor/0.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "NETStandard.Library": "1.6.1",
+          "Proto.Mailbox": "0.1.9",
+          "System.ValueTuple": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.5/Proto.Actor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Proto.Actor.dll": {}
+        }
+      },
+      "Proto.Mailbox/0.1.9": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/Proto.Mailbox.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Proto.Mailbox.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1419,6 +1484,20 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        }
+      },
       "System.Xml.ReaderWriter/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1471,6 +1550,19 @@
     }
   },
   "libraries": {
+    "Google.Protobuf/3.2.0": {
+      "sha512": "qwqIqIWLdQOD/uyh5Kitz1R1RovK1cF4VgBVbVZEHAKLmLqKZJ2Lgx8KGeD8Sua5+2IvKEzNEqv7dHFcwA9Ueg==",
+      "type": "package",
+      "path": "google.protobuf/3.2.0",
+      "files": [
+        "google.protobuf.3.2.0.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.xml"
+      ]
+    },
     "Microsoft.CSharp/4.0.1": {
       "sha512": "xJep87W9UIRMvUErJuFAREdeaKX7F8Ik8TA8A7sPZS/h7zrE/3pA2Mx1rtCiQkv/h0lSIwvwrIl4j9xTkiU1Jw==",
       "type": "package",
@@ -1526,6 +1618,17 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/1.1.2": {
+      "sha512": "hbMEC7HYh2JJK0sSrMXFdOc0tjjRq8kDiSGzXh07AVbMnReLqWa6hA0QJx7umneMK7/9L3sKJnkB+RLGTagkOg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/1.1.2",
+      "files": [
+        "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.1.1.2.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -1684,6 +1787,28 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Proto.Actor/0.1.9": {
+      "sha512": "tbJ7uC2opolud7jzxEmoHbJ7AT8efyWFxBZciIEgjpGNAgnMNgka4Fl02qxIMceVzysasArMUJqRzEzYPOrTGQ==",
+      "type": "package",
+      "path": "proto.actor/0.1.9",
+      "files": [
+        "lib/net452/Proto.Actor.dll",
+        "lib/netstandard1.5/Proto.Actor.dll",
+        "proto.actor.0.1.9.nupkg.sha512",
+        "proto.actor.nuspec"
+      ]
+    },
+    "Proto.Mailbox/0.1.9": {
+      "sha512": "NzpLXwo03dT41NQg+0KQbpsJ9m69FDrc3CvuWzWNddlXy43sxhGck76plkprA4A/8QAvPshz4UoIDdLF3sIgEg==",
+      "type": "package",
+      "path": "proto.mailbox/0.1.9",
+      "files": [
+        "lib/net452/Proto.Mailbox.dll",
+        "lib/netstandard1.5/Proto.Mailbox.dll",
+        "proto.mailbox.0.1.9.nupkg.sha512",
+        "proto.mailbox.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -5034,6 +5159,21 @@
         "system.threading.timer.nuspec"
       ]
     },
+    "System.ValueTuple/4.3.0": {
+      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+      "type": "package",
+      "path": "system.valuetuple/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/.xml",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "system.valuetuple.4.3.0.nupkg.sha512",
+        "system.valuetuple.nuspec"
+      ]
+    },
     "System.Xml.ReaderWriter/4.3.0": {
       "sha512": "ahQ65Ah2htSZTLlsgS8WsWFpM7Jvm6mA0TL6VxPRwgnNPjGgEipav/Rg4DTzNj0Boa5Ic3rEOikLwjO9lIRoGA==",
       "type": "package",
@@ -5176,7 +5316,8 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v1.6": [
       "NETStandard.Library >= 1.6.1",
-      "Neo4jclient >= 2.0.0.8"
+      "Neo4jclient >= 2.0.0.8",
+      "Proto.Actor >= 0.1.9"
     ]
   },
   "packageFolders": {
@@ -5212,6 +5353,10 @@
           "Neo4jclient": {
             "target": "Package",
             "version": "2.0.0.8"
+          },
+          "Proto.Actor": {
+            "target": "Package",
+            "version": "0.1.9"
           }
         }
       }
