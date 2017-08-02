@@ -1,15 +1,11 @@
 using System.Threading.Tasks;
 using Proto;
+using Nasdan.Core.Senses;
 
 namespace Nasdan.Core.Actors
 {
 
-    public class ImageMessage
-    {
-
-        public string Url { get; set; }
-
-    }
+    
 
     public class NasdanActor : IActor
     {
