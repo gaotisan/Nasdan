@@ -2,10 +2,10 @@ using System;
 using Neo4jClient;
 using System.Linq;
 
-namespace library.Representation
+namespace Nasdan.Core.Representation
 {
-    public class Concept
+    public class Concept 
     {
-        string Name {get;set;}
+        string Name { get; set; }
     }
 }

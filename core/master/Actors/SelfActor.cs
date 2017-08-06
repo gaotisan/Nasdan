@@ -1,13 +1,12 @@
 using System.Threading.Tasks;
 using Proto;
 using Nasdan.Core.Senses;
+using Nasdan.Core.Representation;
 
 namespace Nasdan.Core.Actors
 {
 
-    
-
-    public class NasdanActor : IActor
+    public class SelfActor : IActor
     {
 
         public Task ReceiveAsync(IContext context)
@@ -17,6 +16,9 @@ namespace Nasdan.Core.Actors
             switch (context.Message)
             {
                 case ImageMessage img:
+                    //Almacenaso la acción recibida
+                    var r = new Nasdan.API.Neo4j.Cypher();
+                    r.Create("");
                     break;
             }
             return Actor.Done;
