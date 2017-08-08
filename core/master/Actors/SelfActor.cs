@@ -6,7 +6,7 @@ using Nasdan.Core.Representation;
 namespace Nasdan.Core.Actors
 {
 
-    public class SelfActor : IActor
+    internal class SelfActor : IActor
     {
 
         public Task ReceiveAsync(IContext context)
@@ -16,9 +16,14 @@ namespace Nasdan.Core.Actors
             switch (context.Message)
             {
                 case ImageMessage img:
-                    //Almacenaso la acción recibida
+                    //Self recibe un ImageMesage
+                    //Guardamos registro en Solr
+                    //Procesamos la imagen (El procesar devuelve una representación) 
                     var r = new Nasdan.API.Neo4j.Cypher();
-                    r.Create("");
+                    r.CreateGraph("(self)");
+                    var view = new ViewSense();
+                    var graph = view.Process(img);
+                    //guardar grpah en neo4j
                     break;
             }
             return Actor.Done;

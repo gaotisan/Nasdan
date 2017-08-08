@@ -28,8 +28,10 @@ namespace Nasdan.Core.API
             pid.Tell(msg);
         }
 
-        public static void Tell(StringMessage msg){
-            
+        public static void Tell(StringMessage msg)
+        {
+            var pid = Nasdan.GetPID();
+            pid.Tell(msg);    
         }
     }
 }

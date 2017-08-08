@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Nasdan.API.Neo4j
 {
-    public class Cypher
+    internal class Cypher
     {
         public GraphClient Client { get; protected set; }
         public Cypher()
@@ -14,11 +14,9 @@ namespace Nasdan.API.Neo4j
             this.Client = new GraphClient(new Uri("http://localhost.:7474/db/data"), "neo4j", "123");
             this.Client.Connect();
         }
-        public void Create(string graph)
+        public void CreateGraph(string graph)
         {
-            //(you:Person {name:"You"})
-             this.Client.Cypher.Merge("(Self:Actor)")
-                .OnCreate()
+             this.Client.Cypher.Create("(n:SELF)")
                 .ExecuteWithoutResults();
         }
         /*

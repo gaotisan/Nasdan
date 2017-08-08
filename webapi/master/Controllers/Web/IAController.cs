@@ -12,10 +12,7 @@ namespace Nasdan.Controllers.Web
         {            
             ViewData["IAActive"] = "active";
             ViewData["BlogActive"] = "";
-            //var h = new library.Hello();
-            //var t = h.GetTomHanks();
-            //var r = new library.Test();
-            //var tom = r.GetTomHanks();
+            Nasdan.Core.API.Nasdan.Tell(new Nasdan.Core.Senses.ImageMessage());
             return View();
         }
 
