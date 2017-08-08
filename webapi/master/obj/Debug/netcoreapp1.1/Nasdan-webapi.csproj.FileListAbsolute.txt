@@ -8,3 +8,13 @@
 /Users/Santi/Desktop/Nasdan/webapi/master/obj/Debug/netcoreapp1.1/Nasdan-webapi.AssemblyInfo.cs
 /Users/Santi/Desktop/Nasdan/webapi/master/obj/Debug/netcoreapp1.1/Nasdan-webapi.dll
 /Users/Santi/Desktop/Nasdan/webapi/master/obj/Debug/netcoreapp1.1/Nasdan-webapi.pdb
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-webapi.deps.json
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-webapi.runtimeconfig.json
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-webapi.runtimeconfig.dev.json
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-webapi.dll
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-webapi.pdb
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-core.dll
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\bin\Debug\netcoreapp1.1\Nasdan-core.pdb
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\obj\Debug\netcoreapp1.1\Nasdan-webapi.AssemblyInfo.cs
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\obj\Debug\netcoreapp1.1\Nasdan-webapi.dll
+C:\Users\santiago.ochoa\Desktop\Nasdan\webapi\master\obj\Debug\netcoreapp1.1\Nasdan-webapi.pdb
