@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Linq;
 using Neo4jClient;
 using Neo4jClient.Cypher;
@@ -14,10 +15,22 @@ namespace Nasdan.API.Neo4j
             this.Client = new GraphClient(new Uri("http://localhost.:7474/db/data"), "neo4j", "123");
             this.Client.Connect();
         }
+
+        public string Serialize(object obj)
+        {
+            var serializer = new JsonSerializer();
+            var stringWriter = new StringWriter();
+            using (var writer = new JsonTextWriter(stringWriter))
+            {
+                writer.QuoteName = false;
+                serializer.Serialize(writer, obj);
+            }
+            return stringWriter.ToString();
+        }
         public void CreateGraph(string graph)
         {
-             this.Client.Cypher.Create("(n:SELF)")
-                .ExecuteWithoutResults();
+            this.Client.Cypher.Create(graph)
+               .ExecuteWithoutResults();
         }
         /*
         public Person GetTomHanks(){
