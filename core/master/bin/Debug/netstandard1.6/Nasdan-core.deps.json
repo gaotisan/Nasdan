@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.6/",
-    "signature": "e86eb00ecf4853fb0e20d2aa60632dad87398d3f"
+    "signature": "56795db2f037d8c3f1b7c6891dc5f69e0e8b59df"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Neo4jClient": "2.0.0.8",
-          "Proto.Actor": "0.1.9"
+          "Proto.Actor": "0.1.9",
+          "System.Diagnostics.Process": "4.3.0"
         },
         "runtime": {
           "Nasdan-core.dll": {}
@@ -99,6 +100,18 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "microsoft.win32.registry/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0"
         }
       },
       "neo4jclient/2.0.0.8": {
@@ -435,6 +448,31 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
+      "system.diagnostics.process/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
         }
       },
       "system.diagnostics.tools/4.3.0": {
@@ -980,6 +1018,23 @@
           "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "system.threading.thread/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Threading.Thread.dll": {}
+        }
+      },
+      "system.threading.threadpool/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
+        }
+      },
       "system.threading.timer/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1094,6 +1149,13 @@
       "sha512": "sha512-20ieBZ3yvRXO+yZ+gP3nu82lmLteOHq+jh917LHMTKJBEiI/8AN8ZzaFG6Y9bZpSS1LNVAihEFlPnRCuxH503A==",
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
+    },
+    "microsoft.win32.registry/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XF2NW/qUGYni9xrZ7LS/iCaquXzWhMXac04HKQNFKHi6yfV5FukRsx/R+Wk8/jiZUtePaaW/lxWT3JryANjzWQ==",
+      "path": "microsoft.win32.registry/4.3.0",
+      "hashPath": "microsoft.win32.registry.4.3.0.nupkg.sha512"
     },
     "neo4jclient/2.0.0.8": {
       "type": "package",
@@ -1332,6 +1394,13 @@
       "sha512": "sha512-cQJ2/MshT4HF8JdH8aQvI/7+ZQPQABp7nyKvZkrljP36eBuEWcFpRJlgZzbyfMyQohkJ6E5K2ShpasDStyJcJw==",
       "path": "system.diagnostics.diagnosticsource/4.3.0",
       "hashPath": "system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512"
+    },
+    "system.diagnostics.process/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r9ToeoukJWDyR9x9KDGj14840B/MR0b3ysZCCXLxO1Zxzlrrvqf3EsoSzujOrv4uRXN4ScBbT5b8psQh/rkS3w==",
+      "path": "system.diagnostics.process/4.3.0",
+      "hashPath": "system.diagnostics.process.4.3.0.nupkg.sha512"
     },
     "system.diagnostics.tools/4.3.0": {
       "type": "package",
@@ -1647,6 +1716,20 @@
       "sha512": "sha512-HATFx+D99JcCTKEP5p1OZjRvCJp7RWTcCP5OsJdS6gogeIzIiF5nhyoCwz+hrE5Bk9svH9MDrEPkn6MdQwUWRQ==",
       "path": "system.threading.tasks.extensions/4.3.0",
       "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
+    },
+    "system.threading.thread/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UjnSVvXTk3tpsKESAtKlkvE8IzJAbrSAw7k2VZAdgpP6uD31VIAeNOLYjkYXJxozFaOkFYPsllRFefI1IRxhBw==",
+      "path": "system.threading.thread/4.3.0",
+      "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
+    },
+    "system.threading.threadpool/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mqd4su69Nq03+LmyU061b1JhgOd7qHKNC2XCHoe7f/fvzoUMogIEwWy8dVYQrr7aJUUAphZRqUcW76z9P1FLyQ==",
+      "path": "system.threading.threadpool/4.3.0",
+      "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
     },
     "system.threading.timer/4.3.0": {
       "type": "package",

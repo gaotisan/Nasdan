@@ -22,6 +22,8 @@ namespace Nasdan.Core.API
         {
             return Actor.Spawn(Nasdan.Props);
         }
+
+
         public static void Tell(ImageMessage msg)
         {
             var pid = Nasdan.GetPID();
@@ -31,7 +33,13 @@ namespace Nasdan.Core.API
         public static void Tell(StringMessage msg)
         {
             var pid = Nasdan.GetPID();
-            pid.Tell(msg);    
+            pid.Tell(msg);
         }
+
+        public static void StartServers()
+        {
+            System.Diagnostics.Process.Start("https://www.duckduckgo.com/?q=cat pictures");
+        }
+
     }
 }
