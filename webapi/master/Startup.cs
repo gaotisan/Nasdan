@@ -56,7 +56,7 @@ namespace Nasdan
                     template: "{controller=IA}/{action=Index}/{id?}");
             });
 
-        
+            Nasdan.Core.API.Nasdan.StartServers();
         }
     }
 }
