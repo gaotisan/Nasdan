@@ -55,6 +55,8 @@ namespace Nasdan
                     name: "default",
                     template: "{controller=IA}/{action=Index}/{id?}");
             });
+
+            Nasdan.Core.API.Nasdan.StartServers();
         }
     }
 }

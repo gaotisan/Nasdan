@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using Proto;
 using Nasdan.Core.Senses;
-using Nasdan.Core.Representation;
 using Newtonsoft.Json;
 using Nasdan.API.Neo4j;
 
@@ -11,13 +10,13 @@ namespace Nasdan.Core.Actors
     internal class SelfActor : IActor
     {
         protected Cypher _cypher;
-        public Cypher Cypher
+        public Cypher CypherExperiences
         {
             get
             {
                 if (_cypher == null)
                 {
-                    this._cypher = new Cypher();
+                    this._cypher = new Cypher(Enviroment.Representation.experiences);
                 }
                 return this._cypher;
             }
@@ -31,9 +30,9 @@ namespace Nasdan.Core.Actors
             switch (context.Message)
             {
                 case ImageMessage img:
-                    string output = this.Cypher.Serialize(img);
+                    string output = this.CypherExperiences.Serialize(img);
                     //output = "(andres { name:'Andres' })-[:WORKS_AT]->(neo)<-[:WORKS_AT]-(michael { name: 'Michael' })";
-                    this.Cypher.CreateGraph("(n:SELF:ACTOR)<-[:RECEIVE]-(img " + output + ")");
+                    this.CypherExperiences.CreateGraph("(n:SELF:ACTOR)<-[:RECEIVE]-(img " + output + ")");
                     //this.Cypher.CreateGraph(output);
                     //Self recibe un ImageMesage
                     //Guardamos registro en Solr

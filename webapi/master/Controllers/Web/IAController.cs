@@ -12,7 +12,7 @@ namespace Nasdan.Controllers.Web
         {            
             ViewData["IAActive"] = "active";
             ViewData["BlogActive"] = "";
-            Nasdan.Core.API.Nasdan.Tell(new Nasdan.Core.Senses.ImageMessage());
+            //Nasdan.Core.API.Nasdan.Tell(new Nasdan.Core.Senses.ImageMessage());
             return View();
         }
 

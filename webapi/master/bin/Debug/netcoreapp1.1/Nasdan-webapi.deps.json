@@ -1383,7 +1383,8 @@
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Neo4jClient": "2.0.0.8",
-          "Proto.Actor": "0.1.9"
+          "Proto.Actor": "0.1.9",
+          "System.Diagnostics.Process": "4.3.0"
         },
         "runtime": {
           "Nasdan-core.dll": {}

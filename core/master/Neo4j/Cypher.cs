@@ -4,18 +4,25 @@ using System.Linq;
 using Neo4jClient;
 using Neo4jClient.Cypher;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 
 namespace Nasdan.API.Neo4j
 {
     internal class Cypher
     {
         public GraphClient Client { get; protected set; }
-        public Cypher()
-        {
-            this.Client = new GraphClient(new Uri("http://localhost.:7474/db/data"), "neo4j", "123");
-            this.Client.Connect();
-        }
 
+        private const string _user = "neo4j";
+        private const string _password = "123";
+        public Cypher(Enviroment.Representation representation)
+        {
+            string uri = Enviroment.GetUriServer(representation);
+            this.Client = new GraphClient(new Uri(uri), Cypher._user, Cypher._password);
+            this.Client.Connect();
+
+
+        }
+        
         public string Serialize(object obj)
         {
             var serializer = new JsonSerializer();
