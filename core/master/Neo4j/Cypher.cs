@@ -5,10 +5,11 @@ using Neo4jClient;
 using Neo4jClient.Cypher;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
+using System.Collections.Generic;
 
 namespace Nasdan.API.Neo4j
 {
-    internal class Cypher
+    internal partial class Cypher
     {
         public GraphClient Client { get; protected set; }
 
@@ -22,23 +23,68 @@ namespace Nasdan.API.Neo4j
 
 
         }
-        
-        public string Serialize(object obj)
+
+        public string Serialize(object obj, bool addType = false)
         {
-            var serializer = new JsonSerializer();
-            var stringWriter = new StringWriter();
-            using (var writer = new JsonTextWriter(stringWriter))
+            string result = "null";
+            if (obj != null)
             {
-                writer.QuoteName = false;
-                serializer.Serialize(writer, obj);
+                var serializer = new JsonSerializer();
+                var stringWriter = new StringWriter();
+                using (var writer = new JsonTextWriter(stringWriter))
+                {
+                    writer.QuoteName = false;
+                    serializer.Serialize(writer, obj);
+                }
+                result = stringWriter.ToString();
+                if (addType)
+                {
+                    string t = "{Type:\"" + obj.GetType() + "\",";
+                    result = t + result.Substring(1);
+                }
             }
-            return stringWriter.ToString();
+            return result;
         }
-        public void CreateGraph(string graph)
-        {
-            this.Client.Cypher.Create(graph)
+
+        public void CreateGraph(string graph) => this.Client.Cypher.Create(graph)
                .ExecuteWithoutResults();
+
+        #region Cypher Expresions
+        public string GetCypherExpresion_Node(string label)
+        {
+            return null;
         }
+        public string GetCypherExpresion_Node(IEnumerable<string> labels)
+        {
+            return null;
+        }
+
+        public string GetCypherExpresion_Node(object obj)
+        {
+            return null;
+        }
+
+
+        public enum EdgeDirection
+        {
+            inDirection,//<-
+            outDirection, //->
+            //BiDirection, //<->
+        }
+
+
+        public string GetCypherExpresion_Edge(EdgeDirection direction, string name) 
+        {
+            return null;
+        }
+
+        public string GetCypherExpresion_Edge(EdgeDirection direction, string name, object obj)
+        {
+            return null;
+        }
+
+        #endregion
+
         /*
         public Person GetTomHanks(){
             var client = new GraphClient(new Uri("http://127.0.0.1:7474/browser/"),"neo4j", "123");

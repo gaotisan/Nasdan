@@ -41,9 +41,6 @@ namespace Nasdan.Core.API
         {
             Nasdan._startProcess(Enviroment.GetFileName(Enviroment.Representation.experiences), Enviroment.GetStartArgument());
             Nasdan._startProcess(Enviroment.GetFileName(Enviroment.Representation.knowloges), Enviroment.GetStartArgument());
-
-            //Nasdan._startProcess(Nasdan.API.Neo4j.Enviroment., "console");
-            //Nasdan._startProcess(@"C:\Users\santiago.ochoa\Desktop\Nasdan\core\master\knowloges-neo4j-3.2.3-windows\bin\neo4j.bat", "console");
         }
 
         protected static void _startProcess(string filename, string arguments){

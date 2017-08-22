@@ -7,20 +7,20 @@ using Nasdan.API.Neo4j;
 namespace Nasdan.Core.Actors
 {
 
-    internal class SelfActor : IActor
+    internal class SelfActor : IActor //Receive (SENSES) and Sent objects (Sólo manega experiencias)
     {
-        protected Cypher _cypher;
+        protected Cypher _cypherExperiences;
         public Cypher CypherExperiences
         {
             get
             {
-                if (_cypher == null)
+                if (_cypherExperiences == null)
                 {
-                    this._cypher = new Cypher(Enviroment.Representation.experiences);
+                    this._cypherExperiences = new Cypher(Enviroment.Representation.experiences);
                 }
-                return this._cypher;
+                return this._cypherExperiences;
             }
-        }
+        }               
 
         public Task ReceiveAsync(IContext context)
         {
@@ -32,14 +32,15 @@ namespace Nasdan.Core.Actors
                 case ImageMessage img:
                     string output = this.CypherExperiences.Serialize(img);
                     //output = "(andres { name:'Andres' })-[:WORKS_AT]->(neo)<-[:WORKS_AT]-(michael { name: 'Michael' })";
-                    this.CypherExperiences.CreateGraph("(n:SELF:ACTOR)<-[:RECEIVE]-(img " + output + ")");
+                    this.CypherExperiences.CreateGraph("(n:SELF)<-[:RECEIVE {Order:1}]-(img:Nasdan.Core.SensesImageMessage " + output + ")");
                     //this.Cypher.CreateGraph(output);
                     //Self recibe un ImageMesage
                     //Guardamos registro en Solr
                     //Procesamos la imagen (El procesar devuelve una representación) 
-                    var view = new ViewSense();
+                    var view = new ViewSense(this.CypherExperiences);
                     var graph = view.Process(img);
                     //guardar grpah en neo4j
+                    //Notificar del cambio a Will con el Frame insertado
                     break;
             }
             return Actor.Done;

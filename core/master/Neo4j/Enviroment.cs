@@ -13,10 +13,8 @@ namespace Nasdan.API.Neo4j
         }
 
         private const string _neo4jVersion = "neo4j-3.2.3";
-        private const string _rootServerLocation = "C:/Users/Nasdan/core/master/";
-        //private const string _rootGraphLinuxMacFolder = "C:/Users/Santi/desktop/Nasdan/core/master/";
-        //private const string _rootGraphWindowsFolder = "C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/";
-
+        private const string _rootServerLocation = "C:/github/Nasdan/core/master/";
+       
         public static OSPlatform GetOSPlatform()
         {
             OSPlatform result = OSPlatform.OSX;

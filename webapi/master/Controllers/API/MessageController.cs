@@ -8,8 +8,12 @@ namespace Nasdan.Controllers.Web
     [Route("api/[controller]")]
     public class MessageController : Controller
     {
-        
-
+        [HttpGet]
+        public IActionResult GetMessage()
+        {
+            return StatusCode(201);
+        }
+        /* 
         [HttpPost]
         public IActionResult StringMessage([FromBody] StringMessage msg)
         {
@@ -20,16 +24,16 @@ namespace Nasdan.Controllers.Web
             Nasdan.Core.API.Nasdan.Tell(msg);
             return StatusCode(201);
         }
+        */
 
         [HttpPost]
-        public IActionResult ImageMessage([FromBody] ImageMessage msg)
+        public IActionResult ImageMessage(ImageMessage msg)
         {
             if (msg == null)
             {
                 return BadRequest();
             }
-            Nasdan.Core.API.Nasdan.Tell(msg);
-            //Nasdan.Core.API.Nasdan;
+            Nasdan.Core.API.Nasdan.Tell(msg);            
             return StatusCode(201);
         }
 

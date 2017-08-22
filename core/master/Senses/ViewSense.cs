@@ -4,6 +4,10 @@ namespace Nasdan.Core.Senses
 {
     internal class ViewSense
     {
+        protected Nasdan.API.Neo4j.Cypher _cypher;
+        public ViewSense(Nasdan.API.Neo4j.Cypher cypher){
+            this._cypher = cypher;
+        }
 
         public object Process(ImageMessage img)
         {
@@ -23,7 +27,7 @@ namespace Nasdan.Core.Senses
                     case "~/images/inputs/colors-orange.gif":
                     case "~/images/inputs/colors-white.gif":
                     case "~/images/inputs/colors-green.gif":
-
+                        this._cypher.CreateGraph("(n:SELF)-[:PROCESS {Order:2}]->(img " + ":?)-[:IS]->(img :?)");
                         break;
                 }
             }
