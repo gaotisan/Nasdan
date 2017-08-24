@@ -1,0 +1,8 @@
+C:\github\Nasdan\core\master\bin\Debug\netstandard2.0\Nasdan-core.deps.json
+C:\github\Nasdan\core\master\bin\Debug\netstandard2.0\Nasdan-core.dll
+C:\github\Nasdan\core\master\bin\Debug\netstandard2.0\Nasdan-core.pdb
+C:\github\Nasdan\core\master\obj\Debug\netstandard2.0\Nasdan-core.csproj.CoreCompileInputs.cache
+C:\github\Nasdan\core\master\obj\Debug\netstandard2.0\Nasdan-core.AssemblyInfoInputs.cache
+C:\github\Nasdan\core\master\obj\Debug\netstandard2.0\Nasdan-core.AssemblyInfo.cs
+C:\github\Nasdan\core\master\obj\Debug\netstandard2.0\Nasdan-core.dll
+C:\github\Nasdan\core\master\obj\Debug\netstandard2.0\Nasdan-core.pdb
