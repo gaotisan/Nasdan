@@ -9,16 +9,16 @@ namespace Nasdan.Core.Actors
 
     internal class SelfActor : IActor //Receive (SENSES) and Sent objects (Sólo manega experiencias)
     {
-        protected Cypher _cypherExperiences;
-        public Cypher CypherExperiences
+        protected Cypher _cypher;
+        public Cypher Cypher
         {
             get
             {
-                if (_cypherExperiences == null)
+                if (_cypher == null)
                 {
-                    this._cypherExperiences = new Cypher(Enviroment.Representation.experiences);
+                    this._cypher = new Cypher(Enviroment.Representation.unified);
                 }
-                return this._cypherExperiences;
+                return this._cypher;
             }
         }               
 
@@ -30,14 +30,14 @@ namespace Nasdan.Core.Actors
             switch (context.Message)
             {
                 case ImageMessage img:
-                    string output = this.CypherExperiences.Serialize(img);
+                    string output = this.Cypher.Serialize(img);
                     //output = "(andres { name:'Andres' })-[:WORKS_AT]->(neo)<-[:WORKS_AT]-(michael { name: 'Michael' })";
-                    this.CypherExperiences.CreateGraph("(n:SELF)<-[:RECEIVE {Order:1}]-(img:Nasdan.Core.SensesImageMessage " + output + ")");
+                    this.Cypher.CreateGraph("(n:SELF)<-[:RECEIVE {Order:1}]-(img:Nasdan.Core.SensesImageMessage " + output + ")");
                     //this.Cypher.CreateGraph(output);
                     //Self recibe un ImageMesage
                     //Guardamos registro en Solr
                     //Procesamos la imagen (El procesar devuelve una representación) 
-                    var view = new ViewSense(this.CypherExperiences);
+                    var view = new ViewSense(this.Cypher);
                     var graph = view.Process(img);
                     //guardar grpah en neo4j
                     //Notificar del cambio a Will con el Frame insertado

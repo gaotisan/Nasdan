@@ -10,9 +10,9 @@ C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/bin/Debug/netstandard1.6/Nasd
 C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.AssemblyInfo.cs
 C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.dll
 C:/Users/santiago.ochoa/Desktop/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.pdb
-/github/Nasdan/core/master/bin/Debug/netstandard1.6/Nasdan-core.deps.json
-/github/Nasdan/core/master/bin/Debug/netstandard1.6/Nasdan-core.dll
-/github/Nasdan/core/master/bin/Debug/netstandard1.6/Nasdan-core.pdb
-/github/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.AssemblyInfo.cs
-/github/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.dll
-/github/Nasdan/core/master/obj/Debug/netstandard1.6/Nasdan-core.pdb
+C:\github\Nasdan\core\master\bin\Debug\netstandard1.6\Nasdan-core.deps.json
+C:\github\Nasdan\core\master\bin\Debug\netstandard1.6\Nasdan-core.dll
+C:\github\Nasdan\core\master\bin\Debug\netstandard1.6\Nasdan-core.pdb
+C:\github\Nasdan\core\master\obj\Debug\netstandard1.6\Nasdan-core.AssemblyInfo.cs
+C:\github\Nasdan\core\master\obj\Debug\netstandard1.6\Nasdan-core.dll
+C:\github\Nasdan\core\master\obj\Debug\netstandard1.6\Nasdan-core.pdb

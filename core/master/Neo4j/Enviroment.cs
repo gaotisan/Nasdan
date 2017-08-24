@@ -10,6 +10,7 @@ namespace Nasdan.API.Neo4j
         {
             knowloges,
             experiences,
+            unified,
         }
 
         private const string _neo4jVersion = "neo4j-3.2.3";
@@ -63,12 +64,13 @@ namespace Nasdan.API.Neo4j
 
         public static string GetUriServer(Representation representation)
         {
-            string result = "http://localhost.:7373/db/data";
-            if (representation == Representation.experiences)
-            {
-                result = "http://localhost.:7474/db/data";
-            }
-            return result;
+            //string result = "http://localhost.:7373/db/data";
+            //if (representation == Representation.experiences)
+            //{
+            //    result = "http://localhost.:7474/db/data";
+            //}
+            //return result;
+            return "http://localhost.:7474/db/data";
         }
 
 
