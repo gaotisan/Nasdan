@@ -1,11 +1,9 @@
 using System;
 namespace Nasdan.API.Representation
 {
-    internal class _Q //Question => ???
+    internal class _Q : _C //Question => ??? (Conceptos sin asignar o nombrar)
     {        
-        public string Name { get; set; } //Property
         
-        
-
+                
     }
 }
