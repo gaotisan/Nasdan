@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-
+using Nasdan.Representation;
 namespace Nasdan.Core.Senses
 {
     internal class ViewSense
@@ -9,7 +9,7 @@ namespace Nasdan.Core.Senses
             this._cypher = cypher;
         }
 
-        public object Process(ImageMessage img)
+        public _K Process(ImageMessage img)
         {
             //Guardamos lo recibido en Solr. 
 

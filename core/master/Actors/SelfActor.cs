@@ -3,7 +3,7 @@ using Proto;
 using Nasdan.Core.Senses;
 using Newtonsoft.Json;
 using Nasdan.API.Neo4j;
-
+using Nasdan.Representation;
 namespace Nasdan.Core.Actors
 {
 
@@ -30,15 +30,16 @@ namespace Nasdan.Core.Actors
             switch (context.Message)
             {
                 case ImageMessage img:
-                    string output = this.Cypher.Serialize(img);
-                    //output = "(andres { name:'Andres' })-[:WORKS_AT]->(neo)<-[:WORKS_AT]-(michael { name: 'Michael' })";
-                    this.Cypher.CreateGraph("(n:SELF)<-[:RECEIVE {Order:1}]-(img:Nasdan.Core.SensesImageMessage " + output + ")");
-                    //this.Cypher.CreateGraph(output);
                     //Self recibe un ImageMesage
-                    //Guardamos registro en Solr
-                    //Procesamos la imagen (El procesar devuelve una representación) 
+                    string output = this.Cypher.Serialize(img);                    
+                    //Almacenamos ese grafo con un _E (Frame de experiencias) apuntando (Marco o contexto)
+                    _E eframe = new _E();
+                    this.Cypher.CreateGraph("(n:SELF)<-[:RECEIVE]-(img:ImageMessage " + output + ")");                                                            
+                    //Los sentidos lo procesan automaticamente y devuelven lo que ven en colaboración con los conocimientos adquiridos (Contextualizaods)
+                    //Esto devolvera un Frame (Marco) que apunta al grafo completo generado
                     var view = new ViewSense(this.Cypher);
-                    var graph = view.Process(img);
+                    _K kframe = view.Process(img); //Devuelve un Frame almacenado
+                    //El grafo devuelto es almacenado 
                     //guardar grpah en neo4j
                     //Notificar del cambio a Will con el Frame insertado
                     break;

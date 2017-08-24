@@ -4862,11 +4862,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj",
+      "projectUniqueName": "C:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj",
       "projectName": "Nasdan-core",
-      "projectPath": "c:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj",
+      "projectPath": "C:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj",
       "packagesPath": "C:\\Users\\santiago.ochoa\\.nuget\\packages\\",
-      "outputPath": "c:\\github\\Nasdan\\core\\master\\obj\\",
+      "outputPath": "C:\\github\\Nasdan\\core\\master\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

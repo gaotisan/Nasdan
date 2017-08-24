@@ -1,7 +1,7 @@
 using System;
-namespace Nasdan.API.Representation
+namespace Nasdan.Representation
 {
-    internal class _E: IContext //Experience => Context (Frames que provienen del exterior)
+    internal class _E: IFrameContext //Experience => Context (Frames que provienen del exterior)
     {
 
         public Guid Guid { get; set; }

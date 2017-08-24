@@ -1,5 +1,5 @@
 using System;
-namespace Nasdan.API.Representation
+namespace Nasdan.Representation
 {
     internal class _R : _C //Concept as relatioship (Action)
     {
