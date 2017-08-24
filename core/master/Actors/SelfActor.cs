@@ -39,8 +39,8 @@ namespace Nasdan.Core.Actors
                     //Esto devolvera un Frame (Marco) que apunta al grafo completo generado
                     var view = new ViewSense(this.Cypher);
                     _K kframe = view.Process(img); //Devuelve un Frame almacenado
-                    //El grafo devuelto es almacenado 
-                    //guardar grpah en neo4j
+                    //Enlazamos este nuevo frame de conocimiento con el frame de experiencia (Estudiar como : relación crear/generar) 
+                    //o bien crear una propiedad especifica para relacionar frames sin ser relacion. (Creo que mejor relacion)                    
                     //Notificar del cambio a Will con el Frame insertado
                     break;
             }
