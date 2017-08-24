@@ -4,13 +4,13 @@ namespace Nasdan.API.Neo4j.Will
     internal partial class WillManager
     {
 
-        protected Cypher CypherExperiences { get; }
-        protected Cypher CypherKnowloges { get; }
+        protected Cypher Cypher { get; }
+        
 
         public WillManager()
         {
-            this.CypherExperiences = new Cypher(Enviroment.Representation.experiences);
-            this.CypherKnowloges = new Cypher(Enviroment.Representation.knowloges);
+            this.Cypher = new Cypher(representation: Enviroment.Representation.unified);
+           
         }
 
 
