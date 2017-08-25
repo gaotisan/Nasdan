@@ -1231,3 +1231,13 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2017-08-25 11:53:32.304+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [27]:  Check pointing completed
 2017-08-25 11:53:32.304+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
 2017-08-25 11:53:32.304+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-08-25 12:34:32.361+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Starting check pointing...
+2017-08-25 12:34:32.361+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Starting store flush...
+2017-08-25 12:34:32.444+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 29 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-08-25 12:34:32.451+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 29 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-08-25 12:34:32.492+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Store flush completed
+2017-08-25 12:34:32.492+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Starting appending check point entry into the tx log...
+2017-08-25 12:34:32.518+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Appending check point entry into the tx log completed
+2017-08-25 12:34:32.518+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Check pointing completed
+2017-08-25 12:34:32.520+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-08-25 12:34:32.520+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.

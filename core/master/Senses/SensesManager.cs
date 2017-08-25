@@ -21,19 +21,21 @@ namespace Nasdan.Core.Senses
 
         public void Receive(ImageMessage msg)
         {
-            //Grafo: (i:_I {serialized})-[:_R]->(m:ImageMessage {serialized})  
-
-            //'donde _I es un Frame de input, _R es una relación base (ya que no puede ser vacio) y ImageMessage es el mensage recibido
+            //Grafo 1: (iFrame:_I {iFrameSerialized})-[:_R]->(m:ImageMessage {mSerialized})  
+            //Grafo 2: ()
 
             _I iFrame = new _I();
+            _S self = new _S();
             var query = this.Neo4j.Client.Cypher
+                //Nodes: _I, _S, ImageMessage
                  .Create($"(i:_I {{iFrame}})")
-                 .Create($"(m:ImageMessge {{msg}})")
-                 .WithParams(new {iFrame, msg})
-                 .Create("(i)-[:_R]->(m)");            
-            
-            
-            
+                 .Create($"(m:ImageMessage {{msg}})")                                  
+                 .Create($"(s:_S {{self}})")
+                 .WithParams(new {iFrame, msg, self})
+                 //Edges: _R, RECEIVE
+                 .Create("(i)-[:_R]->(m)")
+                 .Create("(s)<-[:RECEIVE]-(m)");
+                                    
             query.ExecuteWithoutResults();     
             
 
