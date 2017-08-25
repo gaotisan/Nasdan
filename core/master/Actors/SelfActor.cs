@@ -7,7 +7,7 @@ using Nasdan.Representation;
 namespace Nasdan.Core.Actors
 {
 
-    internal class SelfActor : IActor //Receive (SENSES) and Sent objects (Sólo manega experiencias)
+    internal class SelfActor : IActor //Las acciones que puede hacer nasdan. De programación o de lo que sea
     {
         protected Cypher _cypher;
         public Cypher Cypher
@@ -29,19 +29,7 @@ namespace Nasdan.Core.Actors
             //Si no ésta lo que hacemos es  procesar la imagen y devolver lo que ve el sistema
             switch (context.Message)
             {
-                case ImageMessage img:
-                    //Self recibe un ImageMesage
-                    string output = this.Cypher.Serialize(img);                    
-                    //Almacenamos ese grafo con un _E (Frame de experiencias) apuntando (Marco o contexto)
-                    _E eframe = new _E();
-                    this.Cypher.CreateGraph("(n:SELF)<-[:RECEIVE]-(img:ImageMessage " + output + ")");                                                            
-                    //Los sentidos lo procesan automaticamente y devuelven lo que ven en colaboración con los conocimientos adquiridos (Contextualizaods)
-                    //Esto devolvera un Frame (Marco) que apunta al grafo completo generado
-                    var view = new ViewSense(this.Cypher);
-                    _K kframe = view.Process(img); //Devuelve un Frame almacenado
-                    //Enlazamos este nuevo frame de conocimiento con el frame de experiencia (Estudiar como : relación crear/generar) 
-                    //o bien crear una propiedad especifica para relacionar frames sin ser relacion. (Creo que mejor relacion)                    
-                    //Notificar del cambio a Will con el Frame insertado
+                case object obj:
                     break;
             }
             return Actor.Done;
