@@ -46,8 +46,10 @@ namespace Nasdan.API.Neo4j
             return result;
         }
 
-        public void CreateGraph(string graph) => this.Client.Cypher.Create(graph)
-               .ExecuteWithoutResults();
+        public void CreateGraph(string graph)
+        {
+            this.Client.Cypher.Create(graph).ExecuteWithoutResults();
+        }
 
         #region Cypher Expresions
         public string GetCypherExpresion_Node(string label)
@@ -73,7 +75,7 @@ namespace Nasdan.API.Neo4j
         }
 
 
-        public string GetCypherExpresion_Edge(EdgeDirection direction, string name) 
+        public string GetCypherExpresion_Edge(EdgeDirection direction, string name)
         {
             return null;
         }
