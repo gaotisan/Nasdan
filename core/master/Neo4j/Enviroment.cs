@@ -2,7 +2,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace Nasdan.API.Neo4j
+namespace Nasdan.Core.Neo4j
 {
     internal class Enviroment
     {

@@ -1,7 +1,7 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
-    internal class _W : _C//Concept as a place (Where)
+    internal class _W //Concept as a place (Where)
     {        
                        
 

@@ -1,12 +1,14 @@
 using System.Threading.Tasks;
-using Nasdan.Representation;
+using Nasdan.Core.Representation;
+using Nasdan.Core.Neo4j;
 namespace Nasdan.Core.Senses
 {
     internal class ViewSense
     {
-        protected Nasdan.API.Neo4j.Cypher _cypher;
-        public ViewSense(Nasdan.API.Neo4j.Cypher cypher){
-            this._cypher = cypher;
+        protected Neo4jManager _neo4j;
+        public ViewSense(Neo4jManager cypher)
+        {
+            this._neo4j = cypher;
         }
 
         public _K Process(ImageMessage img)
@@ -27,7 +29,7 @@ namespace Nasdan.Core.Senses
                     case "~/images/inputs/colors-orange.gif":
                     case "~/images/inputs/colors-white.gif":
                     case "~/images/inputs/colors-green.gif":
-                        this._cypher.CreateGraph("(n:SELF)-[:PROCESS {Order:2}]->(img " + ":?)-[:IS]->(img :?)");
+                        this._neo4j.CreateGraph("(n:SELF)-[:PROCESS {Order:2}]->(img " + ":?)-[:IS]->(img :?)");
                         break;
                 }
             }

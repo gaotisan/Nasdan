@@ -1,9 +1,9 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
-    internal class _R : _C //Concept as relatioship (Action)
+    internal class _R //: Relatioship (Action)
     {
-        public string Order { get; set; } //Property     
-        public string Type {get;set;}
+        //public string Order { get; set; } //Property     
+       // public string Type {get;set;}
     }
 }

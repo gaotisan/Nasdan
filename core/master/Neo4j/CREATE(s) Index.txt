@@ -1,0 +1,3 @@
+CREATE INDEX ON :_I(Guid)
+CREATE INDEX ON :_S(Guid)
+CREATE INDEX ON :ImageMessage(Guid)

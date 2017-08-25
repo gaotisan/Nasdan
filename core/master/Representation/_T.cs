@@ -1,7 +1,7 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
-    internal class _T : _C//Concept as Time (When)
+    internal class _T //Concept as Time (When)
     {        
                        
 

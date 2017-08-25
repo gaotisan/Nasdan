@@ -1,5 +1,5 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
     internal interface IFrameContext // => Frame (Knologes) or Experiences
     {

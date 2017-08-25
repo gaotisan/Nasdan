@@ -1,9 +1,8 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
-    internal class _S : _C //Concept as Subject (Actor)
+    internal class _S  : Frame//SELF 
     {        
-                        
 
     }
 }

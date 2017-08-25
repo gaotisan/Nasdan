@@ -1,15 +1,16 @@
 using System;
-namespace Nasdan.API.Neo4j.Will
+using Nasdan.Core.Neo4j;
+namespace Nasdan.Core.Will
 {
     internal partial class WillManager
     {
 
-        protected Cypher Cypher { get; }
+        protected Neo4jManager _neo4j { get; }
         
 
         public WillManager()
         {
-            this.Cypher = new Cypher(representation: Enviroment.Representation.unified);
+            this._neo4j = new Neo4jManager(representation: Enviroment.Representation.unified);
            
         }
 

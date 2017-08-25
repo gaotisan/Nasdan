@@ -1,7 +1,7 @@
 using Proto;
 using Nasdan.Core.Actors;
 using Nasdan.Core.Senses;
-using Nasdan.API.Neo4j;
+using Nasdan.Core.Neo4j;
 
 namespace Nasdan.Core.API
 {
@@ -14,7 +14,7 @@ namespace Nasdan.Core.API
             {
                 if (Nasdan._props == null)
                 {
-                    Nasdan._props = Actor.FromProducer(() => new SelfActor());
+                    Nasdan._props = Actor.FromProducer(() => new SensesActor());
                 }
                 return Nasdan._props;
             }

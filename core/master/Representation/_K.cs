@@ -1,22 +1,8 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
-    internal class _K : IFrameContext //Frame => Context (Knowloges) (Provienen de razonamientos internos)
+    internal class _K : Frame //Frame => Context (Knowloges) (Provienen de razonamientos internos)
     {
-
-        public Guid Guid { get; set; }
-
-        public _K()
-        {
-            this.Guid = Guid.NewGuid();
-        }
-
-        public _K(Guid id)
-        {
-            this.Guid = id;
-        }
-
-        
 
 
     }

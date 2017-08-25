@@ -1,5 +1,5 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
     internal class _C //Concept
     {        

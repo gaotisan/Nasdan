@@ -1,22 +1,8 @@
 using System;
-namespace Nasdan.Representation
+namespace Nasdan.Core.Representation
 {
-    internal class _O: IFrameContext //Output => Context (Frames que salen al exterior)
+    internal class _O: Frame //Output => Context (Frames que salen al exterior)
     {
-
-        public Guid Guid { get; set; }
-
-        public _O()
-        {
-            this.Guid = Guid.NewGuid();
-        }
-
-        public _O(Guid id)
-        {
-            this.Guid = id;
-        }
-
-        
 
 
     }
