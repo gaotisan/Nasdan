@@ -38,7 +38,8 @@ namespace Nasdan.Core.Actors
                 switch (n)
                 {
                     case Notification._PAdded:
-                        //Buscamos todos los procesos y los ejecutamos
+                        //Buscamos todos los procesos y los ejecutamos de menera Asincrona con el Actor Self
+                        //Patron: (SELF)-[:_R]->
 
                         //Lanzamos otro mensaje a Will que es la de buscar respuesta a cosas que no sabemos (Curiosidad), buscar preguntas sobre lo recibido                
                         break;

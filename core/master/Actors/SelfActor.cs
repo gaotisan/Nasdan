@@ -3,22 +3,32 @@ using Proto;
 using Nasdan.Core.Senses;
 using Newtonsoft.Json;
 using Nasdan.Core.Neo4j;
+using Nasdan.Core.Representation;
 namespace Nasdan.Core.Actors
 {
 
     internal class SelfActor : IActor //Las acciones que puede hacer nasdan. De programación o de lo que sea
     {
-        
+         protected static Props _props;
+        public static Props Props
+        {
+            get
+            {
+                if (SelfActor._props == null)
+                {
+                    SelfActor._props = Actor.FromProducer(() => new SelfActor());
+                }
+                return SelfActor._props;
+            }
+        }
         public Task ReceiveAsync(IContext context)
         {
-            //SELF RECIVE context.Message
-            //Buscamos esa imagen en nuestros conocimientos.
-            //Si no ésta lo que hacemos es  procesar la imagen y devolver lo que ve el sistema
-            switch (context.Message)
-            {
-                case object obj:
-                    break;
-            }
+            if (context.Message is _P){
+                _P pToExecute = (_P)context.Message;
+                //Lo ejecutamos Sincronamente
+
+                //Lanzamos otro mensaje a Will que es la de buscar respuesta a cosas que no sabemos (Curiosidad), buscar preguntas sobre lo recibido                
+            }            
             return Actor.Done;
         }
 
