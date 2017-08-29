@@ -23,6 +23,11 @@ namespace Nasdan.Core.Neo4j
 
 
         }
+        public Neo4jManager(){
+            string uri = Enviroment.GetUriServer(Enviroment.Representation.unified);
+            this.Client = new GraphClient(new Uri(uri), Neo4jManager._user, Neo4jManager._password);
+            this.Client.Connect();
+        }
 
         public string Serialize(object obj, bool addType = false)
         {

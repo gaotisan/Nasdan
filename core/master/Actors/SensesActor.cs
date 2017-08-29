@@ -8,7 +8,19 @@ namespace Nasdan.Core.Actors
 
     internal class SensesActor : IActor //Receive (SENSES) and Sent objects (Sólo manega experiencias)
     {
-        
+        protected static Props _props;
+        public static Props Props
+        {
+            get
+            {
+                if (SensesActor._props == null)
+                {
+                    SensesActor._props = Actor.FromProducer(() => new SensesActor());
+                }
+                return SensesActor._props;
+            }
+        }
+
         public Task ReceiveAsync(IContext context)
         {
             //SELF RECIVE context.Message
@@ -17,10 +29,10 @@ namespace Nasdan.Core.Actors
             switch (context.Message)
             {
                 case ImageMessage img:
-                    SensesManager manager = new SensesManager();                    
+                    ActorManager manager = new ActorManager();                    
                     manager.Receive(img);                    
                     break;
-            }
+            }           
             return Actor.Done;
         }
 

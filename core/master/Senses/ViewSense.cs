@@ -10,6 +10,9 @@ namespace Nasdan.Core.Senses
         {
             this._neo4j = cypher;
         }
+        public ViewSense(){
+            this._neo4j = new Neo4jManager(representation: Enviroment.Representation.unified);
+        }
 
         public _K Process(ImageMessage img)
         {

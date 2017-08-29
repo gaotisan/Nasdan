@@ -1241,3 +1241,15 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2017-08-25 12:34:32.518+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Check pointing completed
 2017-08-25 12:34:32.520+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
 2017-08-25 12:34:32.520+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-08-25 13:03:57.910+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Shutdown started
+2017-08-25 13:03:57.911+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Database is now unavailable
+2017-08-25 13:03:57.931+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [29]:  Starting check pointing...
+2017-08-25 13:03:57.932+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [29]:  Starting store flush...
+2017-08-25 13:03:57.996+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [29]:  Store flush completed
+2017-08-25 13:03:57.996+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [29]:  Starting appending check point entry into the tx log...
+2017-08-25 13:03:58.000+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [29]:  Appending check point entry into the tx log completed
+2017-08-25 13:03:58.001+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [29]:  Check pointing completed
+2017-08-25 13:03:58.001+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-08-25 13:03:58.001+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-08-25 13:03:58.069+0000 INFO [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics START ---
+2017-08-25 13:03:58.070+0000 INFO [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics END ---
