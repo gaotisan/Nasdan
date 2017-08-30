@@ -12872,11 +12872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\github\\Nasdan\\webapi\\master\\Nasdan-webapi.csproj",
+      "projectUniqueName": "c:\\github\\Nasdan\\webapi\\master\\Nasdan-webapi.csproj",
       "projectName": "Nasdan-webapi",
-      "projectPath": "C:\\github\\Nasdan\\webapi\\master\\Nasdan-webapi.csproj",
+      "projectPath": "c:\\github\\Nasdan\\webapi\\master\\Nasdan-webapi.csproj",
       "packagesPath": "C:\\Users\\santiago.ochoa\\.nuget\\packages\\",
-      "outputPath": "C:\\github\\Nasdan\\webapi\\master\\obj\\",
+      "outputPath": "c:\\github\\Nasdan\\webapi\\master\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12895,8 +12895,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj": {
-              "projectPath": "C:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj"
+            "c:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj": {
+              "projectPath": "c:\\github\\Nasdan\\core\\master\\Nasdan-core.csproj"
             }
           }
         }

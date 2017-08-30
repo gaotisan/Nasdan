@@ -9,18 +9,10 @@ namespace Nasdan.Core.API
     {
 
 
-        public static void Tell(ImageMessage msg)
-        {
-            var pid = Actor.Spawn(SensesActor.Props);
-            pid.Tell(msg);
-        }
-
-        public static void Tell(StringMessage msg)
-        {
-            var pid = Actor.Spawn(SensesActor.Props);
-            pid.Tell(msg);
-        }
-
+        public static void Tell(ImageMessage msg) => SelfActor.Tell(msg);
+        
+        public static void Tell(StringMessage msg) => SelfActor.Tell(msg);
+                           
         public static void StartServers()
         {
             Nasdan._startProcess(Enviroment.GetFileName(Enviroment.Representation.experiences), Enviroment.GetStartArgument());

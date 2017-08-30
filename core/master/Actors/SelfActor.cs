@@ -9,8 +9,20 @@ namespace Nasdan.Core.Actors
 
     internal class SelfActor : IActor //Las acciones que puede hacer nasdan. De programación o de lo que sea
     {
-         protected static Props _props;
-        public static Props Props
+        protected Neo4jManager Neo4j { get; }
+        public SelfActor()
+        {
+            this.Neo4j = new Neo4jManager(representation: Enviroment.Representation.unified);
+        }
+
+        public static void Tell(object message)
+        {
+            var pid = Actor.Spawn(SelfActor.Props);
+            pid.Tell(message);
+        }
+
+        private static Props _props;
+        private static Props Props
         {
             get
             {
@@ -23,12 +35,21 @@ namespace Nasdan.Core.Actors
         }
         public Task ReceiveAsync(IContext context)
         {
-            if (context.Message is _P){
-                _P pToExecute = (_P)context.Message;
-                //Lo ejecutamos Sincronamente
-
-                //Lanzamos otro mensaje a Will que es la de buscar respuesta a cosas que no sabemos (Curiosidad), buscar preguntas sobre lo recibido                
-            }            
+            ActorManager manager = new ActorManager(this.Neo4j);
+            switch (context.Message)
+            {
+                //Ipunts
+                case ImageMessage img:
+                    manager.Receive(img);
+                    break;
+                //Do Task (Process)
+                case Neo4jClient.Node<_P> p:
+                    var pToExecute = (Neo4jClient.Node<_P>)context.Message;
+                    manager.Execute(pToExecute);
+                    break;
+                    //Outputs
+                    //Think
+            }
             return Actor.Done;
         }
 

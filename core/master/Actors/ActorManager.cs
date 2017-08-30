@@ -4,7 +4,7 @@ using Nasdan.Core.Representation;
 using System.Linq;
 using Nasdan.Core.Senses;
 using Proto;
-
+using System.Collections.Generic;
 namespace Nasdan.Core.Actors
 {
     internal partial class ActorManager
@@ -12,10 +12,31 @@ namespace Nasdan.Core.Actors
 
         protected Neo4jManager Neo4j { get; }
 
-
-        public ActorManager()
+        public ActorManager(Neo4jManager neo4j)
         {
-            this.Neo4j = new Neo4jManager(representation: Enviroment.Representation.unified);
+            this.Neo4j = neo4j;
+        }
+       
+
+        public void ExecuteAllProcess()
+        {
+            /* 
+            var query = this.Neo4j.Client.Cypher
+                .Match("(p:_P)")
+                .Return(p => p.As<Neo4jClient.Node<_P>>());
+            IEnumerable<Neo4jClient.Node<_P>> _pNodes = query.Results;
+            foreach (var node in _pNodes)
+            {
+                Actor.FromProducer(() => new WillActor());
+                var pid = Actor.Spawn(SensesActor.Props);
+                pid.Tell(node);
+            }
+            */
+        }
+
+        public void Execute(Neo4jClient.Node<_P> p)
+        {
+
         }
 
         public void Receive(ImageMessage msg)
@@ -24,7 +45,7 @@ namespace Nasdan.Core.Actors
             //Grafo 2: (ImageMessage)-[:_R]->(_SELF)
             //Grafo 3: (_SELF)-[:_R]->(_P)
             _I iFrame = new _I();
-            _S self = new _S();                        
+            _S self = new _S();
             _P pToExecute = new _P();
             pToExecute.ClassName = "Nasdan.Core.Senses.ViewSense";
             pToExecute.FunctionName = "Process";
@@ -39,10 +60,10 @@ namespace Nasdan.Core.Actors
                  //Edges
                  .Create("(i)-[:_R]->(m)")
                  .Create("(s)<-[:_R]-(m)")
-                 .Create("(s)-[:_R]->(p)");          
-            Actor.FromProducer(() => new WillActor());
-            var pid = Actor.Spawn(SensesActor.Props);
-            pid.Tell(WillActor.Notification._PAdded);                          
+                 .Create("(s)-[:_R]->(p)")
+                 .Return(p => p.As<Neo4jClient.Node<_P>>());
+            var _pNode = query.Results.Single();            
+            SelfActor.Tell(_pNode);
         }
 
 

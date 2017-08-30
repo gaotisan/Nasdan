@@ -1,7 +1,7 @@
 using System;
 namespace Nasdan.Core.Representation
 {
-    internal class _Q : _C //Question => ??? (Conceptos sin asignar o nombrar)
+    internal class _Q // _? //Question => ??? (elementos sin asignar sin asignar o nombrar ni labelizar)
     {        
         
                 
