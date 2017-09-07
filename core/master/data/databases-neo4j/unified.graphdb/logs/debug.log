@@ -480,3 +480,44 @@ CREATE (i)-[:_L]->(m)
 CREATE (s)<-[:_Q]-(m)
 CREATE (s)-[:_L]->(p)
 RETURN p
+2017-09-07 16:25:16.085+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: 
+CALL db.labels() YIELD label
+WITH COLLECT(label)[..1000] AS labels
+RETURN 'labels' as a, labels as result
+UNION
+CALL db.relationshipTypes() YIELD relationshipType
+WITH COLLECT(relationshipType)[..1000] AS relationshipTypes
+RETURN 'relationshipTypes' as a, relationshipTypes as result
+UNION
+CALL db.propertyKeys() YIELD propertyKey
+WITH COLLECT(propertyKey)[..1000] AS propertyKeys
+RETURN 'propertyKeys' as a, propertyKeys as result
+UNION
+CALL dbms.functions() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as functions
+RETURN 'functions' as a, functions AS result
+UNION
+CALL dbms.procedures() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as procedures
+RETURN 'procedures' as a, procedures as result
+
+2017-09-07 16:25:16.092+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache: CALL db.labels() YIELD label
+WITH COLLECT(label)[..1000] AS labels
+RETURN 'labels' as a, labels as result
+UNION
+CALL db.relationshipTypes() YIELD relationshipType
+WITH COLLECT(relationshipType)[..1000] AS relationshipTypes
+RETURN 'relationshipTypes' as a, relationshipTypes as result
+UNION
+CALL db.propertyKeys() YIELD propertyKey
+WITH COLLECT(propertyKey)[..1000] AS propertyKeys
+RETURN 'propertyKeys' as a, propertyKeys as result
+UNION
+CALL dbms.functions() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as functions
+RETURN 'functions' as a, functions AS result
+UNION
+CALL dbms.procedures() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as procedures
+RETURN 'procedures' as a, procedures as result
+

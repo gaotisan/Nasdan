@@ -4,15 +4,15 @@ using Nasdan.Core.Neo4j;
 using System.Linq;
 namespace Nasdan.Core.Senses
 {
-    internal class SensesManager: Manager
+    internal class SensesManager : Manager
     {
 
-        public SensesManager(Neo4jManager neo4j): base(neo4j)
+        public SensesManager(Neo4jManager neo4j) : base(neo4j)
         {
-            
+
         }
-        
-        public object Process(ImageMessage img) 
+
+        public object Process(ImageMessage img)
         {
             //Guardamos lo recibido en Solr. 
 
@@ -40,15 +40,15 @@ namespace Nasdan.Core.Senses
             concept2.Name = null;
             var query = this.Neo4j.Client.Cypher
                  //Nodes
-                 .Create($"(c1:_Q:_C {{concept1}})")                
-                 .Create($"(c2:_Q:_C {{concept2}})")                
-                 .WithParams(new { concept1, concept2})
+                 .Create($"(c1:_Q:_C {{concept1}})")
+                 .Create($"(c2:_Q:_C {{concept2}})")
+                 .WithParams(new { concept1, concept2 })
                  //Edges
-                 .Create("(c1)-[:_Q]->(c2)")                                                 
+                 .Create("(c1)-[:_Q]->(c2)")
                  .Return(c1 => c1.As<Neo4jClient.Node<_C>>());
             var _pNode = query.Results.Single();
-              var _n = ((Neo4jClient.Node<_C>)_pNode).to_N<_C>();
-            return _n;            
+            var _n = ((Neo4jClient.Node<_C>)_pNode).to_N<_C>();
+            return _n;
         }
 
 
