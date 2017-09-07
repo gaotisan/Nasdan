@@ -33,6 +33,12 @@ namespace Nasdan.Core.Actors
                 return SelfActor._props;
             }
         }
+
+        public enum MessageActions
+        {
+            label,
+        }
+
         public Task ReceiveAsync(IContext context)
         {
             ActorManager manager = new ActorManager(this.Neo4j);
@@ -43,12 +49,19 @@ namespace Nasdan.Core.Actors
                     manager.Receive(img);
                     break;
                 //Do Task (Process)
-                case Neo4jClient.Node<_P> p:
-                    var pToExecute = (Neo4jClient.Node<_P>)context.Message;
+                case _N<_P> p:
+                    var pToExecute = (_N<_P>)context.Message;
                     manager.Execute(pToExecute);
                     break;
+                case MessageActions msg:
+                    switch (msg)
+                    {
+                        case MessageActions.label:
+                            break;
+                    }
+                    break;
                     //Outputs
-                    //Think
+                    //Thinks
             }
             return Actor.Done;
         }

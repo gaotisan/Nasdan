@@ -411,3 +411,209 @@ RETURN 'procedures' as a, procedures as result
 2017-08-30 09:09:36.585+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 32390ms.
 2017-08-30 09:09:46.217+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 313ms.
 2017-08-30 10:26:01.542+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 17494ms.
+2017-09-04 07:37:02.552+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 413435765ms.
+2017-09-04 08:02:59.492+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 253ms.
+2017-09-04 12:48:15.529+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 5327695ms.
+2017-09-04 12:48:34.803+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 204ms.
+2017-09-04 15:05:32.793+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 377ms.
+2017-09-04 16:46:57.572+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 23973ms.
+2017-09-05 14:26:52.896+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [22]:  Starting check pointing...
+2017-09-05 14:26:52.896+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [22]:  Starting store flush...
+2017-09-05 14:26:52.905+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 22 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-05 14:26:52.913+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 22 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-05 14:26:52.950+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [22]:  Store flush completed
+2017-09-05 14:26:52.951+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [22]:  Starting appending check point entry into the tx log...
+2017-09-05 14:26:52.954+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [22]:  Appending check point entry into the tx log completed
+2017-09-05 14:26:52.954+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [22]:  Check pointing completed
+2017-09-05 14:26:52.954+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-05 14:26:52.954+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-05 14:41:53.009+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [26]:  Starting check pointing...
+2017-09-05 14:41:53.009+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [26]:  Starting store flush...
+2017-09-05 14:41:53.014+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 26 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-05 14:41:53.019+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 26 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-05 14:41:53.028+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [26]:  Store flush completed
+2017-09-05 14:41:53.028+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [26]:  Starting appending check point entry into the tx log...
+2017-09-05 14:41:53.030+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [26]:  Appending check point entry into the tx log completed
+2017-09-05 14:41:53.030+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [26]:  Check pointing completed
+2017-09-05 14:41:53.030+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-05 14:41:53.030+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-05 14:58:43.074+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [28]:  Starting check pointing...
+2017-09-05 14:58:43.074+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [28]:  Starting store flush...
+2017-09-05 14:58:43.080+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 28 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-05 14:58:43.091+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 28 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-05 14:58:43.107+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [28]:  Store flush completed
+2017-09-05 14:58:43.107+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [28]:  Starting appending check point entry into the tx log...
+2017-09-05 14:58:43.108+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [28]:  Appending check point entry into the tx log completed
+2017-09-05 14:58:43.108+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [28]:  Check pointing completed
+2017-09-05 14:58:43.108+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-05 14:58:43.108+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-05 14:59:47.596+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: MATCH (n) RETURN n LIMIT 25
+2017-09-05 14:59:47.597+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache: MATCH (n) RETURN n LIMIT 25
+2017-09-05 14:59:47.805+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2017-09-05 14:59:47.808+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2017-09-05 15:13:27.969+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: 
+CALL db.labels() YIELD label
+WITH COLLECT(label)[..1000] AS labels
+RETURN 'labels' as a, labels as result
+UNION
+CALL db.relationshipTypes() YIELD relationshipType
+WITH COLLECT(relationshipType)[..1000] AS relationshipTypes
+RETURN 'relationshipTypes' as a, relationshipTypes as result
+UNION
+CALL db.propertyKeys() YIELD propertyKey
+WITH COLLECT(propertyKey)[..1000] AS propertyKeys
+RETURN 'propertyKeys' as a, propertyKeys as result
+UNION
+CALL dbms.functions() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as functions
+RETURN 'functions' as a, functions AS result
+UNION
+CALL dbms.procedures() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as procedures
+RETURN 'procedures' as a, procedures as result
+
+2017-09-05 15:13:27.975+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache: CALL db.labels() YIELD label
+WITH COLLECT(label)[..1000] AS labels
+RETURN 'labels' as a, labels as result
+UNION
+CALL db.relationshipTypes() YIELD relationshipType
+WITH COLLECT(relationshipType)[..1000] AS relationshipTypes
+RETURN 'relationshipTypes' as a, relationshipTypes as result
+UNION
+CALL db.propertyKeys() YIELD propertyKey
+WITH COLLECT(propertyKey)[..1000] AS propertyKeys
+RETURN 'propertyKeys' as a, propertyKeys as result
+UNION
+CALL dbms.functions() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as functions
+RETURN 'functions' as a, functions AS result
+UNION
+CALL dbms.procedures() YIELD name, signature, description
+WITH collect({name: name, signature: signature, description: description}) as procedures
+RETURN 'procedures' as a, procedures as result
+
+2017-09-05 15:13:43.155+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Starting check pointing...
+2017-09-05 15:13:43.155+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Starting store flush...
+2017-09-05 15:13:43.163+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 29 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-05 15:13:43.167+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 29 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-05 15:13:43.188+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Store flush completed
+2017-09-05 15:13:43.188+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Starting appending check point entry into the tx log...
+2017-09-05 15:13:43.191+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Appending check point entry into the tx log completed
+2017-09-05 15:13:43.191+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [29]:  Check pointing completed
+2017-09-05 15:13:43.191+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-05 15:13:43.191+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-05 15:15:44.686+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: CREATE (i:_I {iFrame})
+CREATE (m:ImageMessage {msg})
+CREATE (s:_S)
+CREATE (p:_P {pToExecute})
+CREATE (i)-[:_L]->(m)
+CREATE (s)<-[:_Q]-(m)
+CREATE (s)-[:_L]->(p)
+RETURN p
+2017-09-05 15:15:44.687+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache: CREATE (i:_I {iFrame})
+CREATE (m:ImageMessage {msg})
+CREATE (s:_S)
+CREATE (p:_P {pToExecute})
+CREATE (i)-[:_L]->(m)
+CREATE (s)<-[:_Q]-(m)
+CREATE (s)-[:_L]->(p)
+RETURN p
+2017-09-05 15:28:43.235+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [38]:  Starting check pointing...
+2017-09-05 15:28:43.235+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [38]:  Starting store flush...
+2017-09-05 15:28:43.244+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 38 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-05 15:28:43.249+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 38 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-05 15:28:43.283+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [38]:  Store flush completed
+2017-09-05 15:28:43.283+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [38]:  Starting appending check point entry into the tx log...
+2017-09-05 15:28:43.287+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [38]:  Appending check point entry into the tx log completed
+2017-09-05 15:28:43.287+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [38]:  Check pointing completed
+2017-09-05 15:28:43.287+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-05 15:28:43.287+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-05 15:43:43.332+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [39]:  Starting check pointing...
+2017-09-05 15:43:43.332+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [39]:  Starting store flush...
+2017-09-05 15:43:43.340+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 39 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-05 15:43:43.345+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 39 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-05 15:43:43.367+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [39]:  Store flush completed
+2017-09-05 15:43:43.367+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [39]:  Starting appending check point entry into the tx log...
+2017-09-05 15:43:43.370+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [39]:  Appending check point entry into the tx log completed
+2017-09-05 15:43:43.370+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [39]:  Check pointing completed
+2017-09-05 15:43:43.370+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-05 15:43:43.370+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 06:05:23.341+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 48970056ms.
+2017-09-06 07:56:12.165+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [40]:  Starting check pointing...
+2017-09-06 07:56:12.165+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [40]:  Starting store flush...
+2017-09-06 07:56:12.168+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 40 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 07:56:12.174+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 40 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 07:56:12.183+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [40]:  Store flush completed
+2017-09-06 07:56:12.183+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [40]:  Starting appending check point entry into the tx log...
+2017-09-06 07:56:12.185+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [40]:  Appending check point entry into the tx log completed
+2017-09-06 07:56:12.185+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [40]:  Check pointing completed
+2017-09-06 07:56:12.185+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 07:56:12.185+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 08:11:12.238+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [45]:  Starting check pointing...
+2017-09-06 08:11:12.238+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [45]:  Starting store flush...
+2017-09-06 08:11:12.245+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 45 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-06 08:11:12.250+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 45 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-06 08:11:12.283+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [45]:  Store flush completed
+2017-09-06 08:11:12.283+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [45]:  Starting appending check point entry into the tx log...
+2017-09-06 08:11:12.287+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [45]:  Appending check point entry into the tx log completed
+2017-09-06 08:11:12.287+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [45]:  Check pointing completed
+2017-09-06 08:11:12.287+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 08:11:12.287+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 09:15:24.586+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 87404ms.
+2017-09-06 09:55:35.629+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 2393655ms.
+2017-09-06 10:19:37.036+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [47]:  Starting check pointing...
+2017-09-06 10:19:37.036+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [47]:  Starting store flush...
+2017-09-06 10:19:37.044+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 47 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 10:19:37.053+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 47 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 10:19:37.082+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [47]:  Store flush completed
+2017-09-06 10:19:37.082+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [47]:  Starting appending check point entry into the tx log...
+2017-09-06 10:19:37.086+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [47]:  Appending check point entry into the tx log completed
+2017-09-06 10:19:37.086+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [47]:  Check pointing completed
+2017-09-06 10:19:37.086+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 10:19:37.086+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 10:34:37.186+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Starting check pointing...
+2017-09-06 10:34:37.186+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Starting store flush...
+2017-09-06 10:34:37.189+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 48 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-06 10:34:37.195+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 48 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-06 10:34:37.204+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Store flush completed
+2017-09-06 10:34:37.204+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Starting appending check point entry into the tx log...
+2017-09-06 10:34:37.206+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Appending check point entry into the tx log completed
+2017-09-06 10:34:37.206+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Check pointing completed
+2017-09-06 10:34:37.206+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 10:34:37.206+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 13:00:20.600+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 843316ms.
+2017-09-06 13:03:18.514+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 160435ms.
+2017-09-06 13:13:46.583+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 610447ms.
+2017-09-06 13:17:22.088+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 197507ms.
+2017-09-06 13:43:39.589+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 1560460ms.
+2017-09-06 14:15:31.219+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [49]:  Starting check pointing...
+2017-09-06 14:15:31.220+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [49]:  Starting store flush...
+2017-09-06 14:15:31.237+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 49 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 14:15:31.254+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 49 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 14:15:31.280+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [49]:  Store flush completed
+2017-09-06 14:15:31.280+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [49]:  Starting appending check point entry into the tx log...
+2017-09-06 14:15:31.283+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [49]:  Appending check point entry into the tx log completed
+2017-09-06 14:15:31.284+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [49]:  Check pointing completed
+2017-09-06 14:15:31.284+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 14:15:31.284+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 14:30:31.387+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [54]:  Starting check pointing...
+2017-09-06 14:30:31.388+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [54]:  Starting store flush...
+2017-09-06 14:30:31.392+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 54 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-06 14:30:31.396+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 54 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-06 14:30:31.421+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [54]:  Store flush completed
+2017-09-06 14:30:31.421+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [54]:  Starting appending check point entry into the tx log...
+2017-09-06 14:30:31.422+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [54]:  Appending check point entry into the tx log completed
+2017-09-06 14:30:31.422+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [54]:  Check pointing completed
+2017-09-06 14:30:31.422+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 14:30:31.423+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-06 14:45:31.459+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [58]:  Starting check pointing...
+2017-09-06 14:45:31.460+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [58]:  Starting store flush...
+2017-09-06 14:45:31.469+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 58 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 14:45:31.475+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 58 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b].
+2017-09-06 14:45:31.486+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [58]:  Store flush completed
+2017-09-06 14:45:31.486+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [58]:  Starting appending check point entry into the tx log...
+2017-09-06 14:45:31.487+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [58]:  Appending check point entry into the tx log completed
+2017-09-06 14:45:31.487+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [58]:  Check pointing completed
+2017-09-06 14:45:31.487+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-06 14:45:31.488+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-09-07 07:32:35.092+0000 WARN [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 58258642ms.

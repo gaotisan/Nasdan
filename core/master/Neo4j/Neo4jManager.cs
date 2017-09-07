@@ -6,6 +6,7 @@ using Neo4jClient.Cypher;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Nasdan.Core.Neo4j
 {
@@ -23,12 +24,64 @@ namespace Nasdan.Core.Neo4j
 
 
         }
-        public Neo4jManager(){
+        public Neo4jManager()
+        {
             string uri = Enviroment.GetUriServer(Enviroment.Representation.unified);
             this.Client = new GraphClient(new Uri(uri), Neo4jManager._user, Neo4jManager._password);
             this.Client.Connect();
         }
 
+        public void Populate(string value, object target){
+            JsonConvert.PopulateObject(value, target);
+        }
+
+        
+        public Type GetType(string json){
+            Type result = typeof(Dictionary<string, object>);
+            if (json.StartsWith("{Type:")){
+                var index = json.IndexOf(",");
+                var t = json.Substring(5,5-index);                
+            }
+            return result;
+        }
+
+        public object GetParameter(string json){
+            object result = null;
+            if (json != string.Empty){
+                
+            }
+            return result;
+        }
+
+        public object GetInstance(string json){
+            return null;
+        }
+
+        public object GetInstancePopulate(string json){
+            return null;
+        }
+
+        public object Deserialize(string json)
+        {
+            object result = null;
+            /* 
+            if (json != string.Empty)
+            {
+                if (json.StartsWith("{Type:")){
+
+                }
+                JsonConvert.PopulateObject()
+                var test = JsonConvert.DeserializeObject<Neo4jManager>(json);
+                //var serializer = new JsonSerializer();
+                //var stringReader = new StringReader(json);
+                //using (var reader = new JsonTextReader(stringReader))
+                //{
+                //    result = serializer.Deserialize(reader);
+                //}
+            }
+            */
+            return result;
+        }
         public string Serialize(object obj, bool addType = false)
         {
             string result = "null";
