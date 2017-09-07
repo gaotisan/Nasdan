@@ -44,8 +44,7 @@ namespace Nasdan.Core.Senses
                  .Create($"(c2:_Q:_C {{concept2}})")                
                  .WithParams(new { concept1, concept2})
                  //Edges
-                 .Create("(c1)-[:_Q]->(c2)")                 
-                 .Create("(c1)<-[:_Q]-(c2)")                 
+                 .Create("(c1)-[:_Q]->(c2)")                                                 
                  .Return(c1 => c1.As<Neo4jClient.Node<_C>>());
             var _pNode = query.Results.Single();
               var _n = ((Neo4jClient.Node<_C>)_pNode).to_N<_C>();

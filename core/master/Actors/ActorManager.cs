@@ -93,12 +93,26 @@ namespace Nasdan.Core.Actors
                 else
                 {
                     //Is a function (Value expected)
-                    var assembly = this.GetAssembly(p.Data.ResultAssemblyPath);
-                    var ts = assembly.GetTypes();
+                    var assembly = this.GetAssembly(p.Data.ResultAssemblyPath);                    
                     var resultType = assembly.GetType(p.Data.ResultType);
                     if (resultType.GetGenericTypeDefinition() == typeof(_N<>))
                     {
-                        //2º) El metodo invocado devuelve un tipo Node<T>
+                        //2º) El metodo invocado devuelve un tipo Node<T>                        
+                        var reference = result.GetType().GetProperty("Reference").GetValue(result); 
+                        long id = (long)reference.GetType().GetProperty("Id").GetValue(reference); 
+                        //.PropertyType.GetProperty("Id").GetValue(result);                                         
+                        this.Neo4j.Client.Cypher
+                        .Match($"(p:_P)--(s:_S)")
+                        .Where($"ID(p) = {{idParam}}")
+                        .WithParam("idParam", p.Reference.Id)
+                        .Delete($"(p)")
+                        .Match($"(n)")
+                        .Where($"ID(n) = {{idResult}}")
+                        .WithParam("idResult", id)
+                        .Create($"(s)-[:_P {{_pSerialized}}]->(n)")
+                        .WithParam("_pSerialized", p)
+                        .Create($"(s)-[:_Q]->(n)")
+                        .ExecuteWithoutResults();                                                                                                                                             
                     }
                     else
                     {
