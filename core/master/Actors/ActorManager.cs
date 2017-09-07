@@ -106,6 +106,8 @@ namespace Nasdan.Core.Actors
                         .Where($"ID(p) = {{idParam}}")
                         .WithParam("idParam", p.Reference.Id)
                         .Delete($"(p)")
+                        .ExecuteWithoutResults();
+                        /* 
                         .Match($"(n)")
                         .Where($"ID(n) = {{idResult}}")
                         .WithParam("idResult", id)
@@ -113,6 +115,7 @@ namespace Nasdan.Core.Actors
                         .WithParam("_pSerialized", p)
                         .Create($"(s)-[:_Q]->(n)")
                         .ExecuteWithoutResults();                                                                                                                                             
+                        */
                     }
                     else
                     {
