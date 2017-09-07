@@ -521,3 +521,13 @@ CALL dbms.procedures() YIELD name, signature, description
 WITH collect({name: name, signature: signature, description: description}) as procedures
 RETURN 'procedures' as a, procedures as result
 
+2017-09-07 16:29:19.321+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [43]:  Starting check pointing...
+2017-09-07 16:29:19.321+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [43]:  Starting store flush...
+2017-09-07 16:29:19.330+0000 INFO [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 43 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-07 16:29:19.340+0000 INFO [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 43 to [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.b], from [C:\github\Nasdan\core\master\data\databases-neo4j\unified.graphdb\neostore.counts.db.a].
+2017-09-07 16:29:19.369+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [43]:  Store flush completed
+2017-09-07 16:29:19.370+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [43]:  Starting appending check point entry into the tx log...
+2017-09-07 16:29:19.372+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [43]:  Appending check point entry into the tx log completed
+2017-09-07 16:29:19.372+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [43]:  Check pointing completed
+2017-09-07 16:29:19.373+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-09-07 16:29:19.373+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
