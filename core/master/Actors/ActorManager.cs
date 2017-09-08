@@ -72,29 +72,29 @@ namespace Nasdan.Core.Actors
             return result;
         }
 
-        public void Execute(_N<_P> p)
+        public void Execute(_N<_P> nP)
         {
             try
             {
                 //Get Method Info
-                var manager = this.GetManager(p.Data);
-                var method = manager.GetType().GetMethod(p.Data.FunctionName);
-                var parameter = this.GetParameter(p.Data);
+                var manager = this.GetManager(nP.Data);
+                var method = manager.GetType().GetMethod(nP.Data.FunctionName);
+                var parameter = this.GetParameter(nP.Data);
                 var parameters = new object[] { parameter };
                 var result = method.Invoke(manager, parameters);
                 //Hay 3 posibilidades
                 //1º) El método no devuelve nada
                 //2º) El metodo invocado devuelve un tipo Node<T>
                 //3º) Devuelve una clase pero que no es de tipo Node<T>                                                 
-                if (string.IsNullOrEmpty(p.Data.ResultType))
+                if (string.IsNullOrEmpty(nP.Data.ResultType))
                 {
                     //1º) El método no devuelve nada
                 }
                 else
                 {
                     //Is a function (Value expected)
-                    var assembly = this.GetAssembly(p.Data.ResultAssemblyPath);                    
-                    var resultType = assembly.GetType(p.Data.ResultType);
+                    var assembly = this.GetAssembly(nP.Data.ResultAssemblyPath);                    
+                    var resultType = assembly.GetType(nP.Data.ResultType);
                     if (resultType.GetGenericTypeDefinition() == typeof(_N<>))
                     {
                         //2º) El metodo invocado devuelve un tipo Node<T>                        
@@ -102,10 +102,10 @@ namespace Nasdan.Core.Actors
                         long id = (long)reference.GetType().GetProperty("Id").GetValue(reference); 
                         //.PropertyType.GetProperty("Id").GetValue(result);                                         
                         this.Neo4j.Client.Cypher
-                        .Match($"(p:_P)--(s:_S)")
+                        .Match($"(p)")
                         .Where($"ID(p) = {{idParam}}")
-                        .WithParam("idParam", p.Reference.Id)
-                        .Delete($"(p)")
+                        .WithParam("idParam", nP.Reference.Id)
+                        .Delete("(p)")
                         .ExecuteWithoutResults();
                         /* 
                         .Match($"(n)")
@@ -130,7 +130,7 @@ namespace Nasdan.Core.Actors
                 this.Neo4j.Client.Cypher
                     .Match($"(n:_P)")
                     .Where($"ID(n) = {{idParam}}")
-                    .WithParam("idParam", p.Reference.Id)
+                    .WithParam("idParam", nP.Reference.Id)
                     .Create($"(e:_E {{error}})")
                     .WithParam("error", error)
                     .Create("(n)-[:_L]->(e)")
