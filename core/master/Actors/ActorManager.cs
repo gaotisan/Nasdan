@@ -93,20 +93,53 @@ namespace Nasdan.Core.Actors
                 else
                 {
                     //Is a function (Value expected)
-                    var assembly = this.GetAssembly(nP.Data.ResultAssemblyPath);                    
+                    var assembly = this.GetAssembly(nP.Data.ResultAssemblyPath);
                     var resultType = assembly.GetType(nP.Data.ResultType);
                     if (resultType.GetGenericTypeDefinition() == typeof(_N<>))
                     {
                         //2º) El metodo invocado devuelve un tipo Node<T>                        
-                        var reference = result.GetType().GetProperty("Reference").GetValue(result); 
-                        long id = (long)reference.GetType().GetProperty("Id").GetValue(reference); 
+                        var reference = result.GetType().GetProperty("Reference").GetValue(result);
+                        long id = (long)reference.GetType().GetProperty("Id").GetValue(reference);
                         //.PropertyType.GetProperty("Id").GetValue(result);                                         
+                        var query = this.Neo4j.Client.Cypher
+                        .Match($"(p)")
+                        .Where($"ID(p) = {{idParam}}")
+                        .WithParam("idParam", nP.Reference.Id)
+                        .Return(p => p.As<Neo4jClient.Node<_P>>());
+                        var _pNode = query.Results.Single();
+
+
+                        this.Neo4j.Client.Cypher
+                        .OptionalMatch($"(p:_P)-[r]-()")
+                        .Where($"ID(p) = {{idParam}}")
+                        .WithParam("idParam", nP.Reference.Id)
+                        .Delete("r,p")
+                        .ExecuteWithoutResults();
+                        /* 
+                        this.Neo4j.Client.Cypher
+                        .Match("(p:_P)")
+                        .OptionalMatch("(p)-[r]-()")
+                        .Where($"ID(p) = {{idParam}}")
+                        .WithParam("idParam", nP.Reference.Id)
+                        .Delete("r, p")
+                        .ExecuteWithoutResults();
+                        */
+                        /* 
+                        this.Neo4j.Client.Cypher
+                        .Match("(p:_P)")                                                
+                        .Delete("p")
+                        .ExecuteWithoutResults();
+                        */
+
+
+                        /* 
                         this.Neo4j.Client.Cypher
                         .Match($"(p)")
                         .Where($"ID(p) = {{idParam}}")
                         .WithParam("idParam", nP.Reference.Id)
                         .Delete("(p)")
                         .ExecuteWithoutResults();
+                        */
                         /* 
                         .Match($"(n)")
                         .Where($"ID(n) = {{idResult}}")
