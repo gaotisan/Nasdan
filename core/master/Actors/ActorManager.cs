@@ -60,14 +60,26 @@ namespace Nasdan.Core.Actors
             return assembly;
         }
 
-        public object GetParameter(_P p)
+
+        public object GetParameter1(_P p)
         {
             object result = null;
-            if (!string.IsNullOrEmpty(p.ArgumentJson))
+            if (!string.IsNullOrEmpty(p.Argument1Json))
             {
-                Assembly assembly = this.GetAssembly(p.ArgumentAssemblyPath);
-                var typeParameter = assembly.GetType(p.ArgumentType);
-                result = this.Deserialize(p.ArgumentJson, typeParameter);
+                Assembly assembly = this.GetAssembly(p.Argument1AssemblyPath);
+                var typeParameter = assembly.GetType(p.Argument1Type);
+                result = this.Deserialize(p.Argument1Json, typeParameter);
+            }
+            return result;
+        }
+        public object GetParameter2(_P p)
+        {
+            object result = null;
+            if (!string.IsNullOrEmpty(p.Argument2Json))
+            {
+                Assembly assembly = this.GetAssembly(p.Argument2AssemblyPath);
+                var typeParameter = assembly.GetType(p.Argument2Type);
+                result = this.Deserialize(p.Argument2Json, typeParameter);
             }
             return result;
         }
@@ -79,8 +91,9 @@ namespace Nasdan.Core.Actors
                 //Get Method Info
                 var manager = this.GetManager(nP.Data);
                 var method = manager.GetType().GetMethod(nP.Data.FunctionName);
-                var parameter = this.GetParameter(nP.Data);
-                var parameters = new object[] { parameter };
+                var parameter1 = this.GetParameter1(nP.Data);
+                var parameter2 = this.GetParameter2(nP.Data);
+                var parameters = new object[] { parameter1, parameter2 };
                 var result = method.Invoke(manager, parameters);
                 //Hay 3 posibilidades
                 //1º) El método no devuelve nada
@@ -99,7 +112,7 @@ namespace Nasdan.Core.Actors
                     {
                         //2º) El metodo invocado devuelve un tipo Node<T>                        
                         var reference = result.GetType().GetProperty("Reference").GetValue(result);
-                        long resultId = (long)reference.GetType().GetProperty("Id").GetValue(reference);                                      
+                        long resultId = (long)reference.GetType().GetProperty("Id").GetValue(reference);
                         //DELETE _P (Process)
                         var query = this.Neo4j.Client.Cypher
                         .OptionalMatch($"(p:_P)<-[l:_L]-(s:_S)")
@@ -115,9 +128,9 @@ namespace Nasdan.Core.Actors
                         .WithParam("idParam1", self.Reference.Id)
                         .Match($"(n)")
                         .Where($"ID(n) = {{idParam2}}")
-                        .WithParam("idParam2",resultId)
+                        .WithParam("idParam2", resultId)
                         .Create("(s)-[r:_Q]->(n)")
-                        .ExecuteWithoutResults();                        
+                        .ExecuteWithoutResults();
                     }
                     else
                     {
@@ -151,27 +164,43 @@ namespace Nasdan.Core.Actors
             //Grafo 3: (_SELF)-[:_R]->(_P)
             _I iFrame = new _I();
             _S self = new _S();
+            var query = this.Neo4j.Client.Cypher
+                //Nodes: _I, _S, ImageMessage, _P
+                .Create($"(i:_I {{iFrame}})")
+                .Create($"(m:ImageMessage {{msg}})")
+                .Create($"(s:_S)")
+                .WithParams(new { iFrame, msg })
+                .Create("(i)-[:_L]->(s)")
+                .Create("(s)<-[:_Q]-(m)")                 
+                .Return((i, m, s) =>
+                   new
+                   {
+                       input = i.As<Neo4jClient.Node<_I>>(),
+                       message = m.As<Neo4jClient.Node<ImageMessage>>(),
+                       self = s.As<Neo4jClient.Node<_S>>()
+                   }
+               );
+            var result = query.Results.Single();
+            //Create Process to Exceute
             _P pToExecute = new _P();
             pToExecute.ManagerType = "Nasdan.Core.Senses.SensesManager";
             pToExecute.FunctionName = "Process";
-            pToExecute.ArgumentJson = this.Serialize(msg);
-            pToExecute.ArgumentType = msg.GetType().ToString();
+            pToExecute.Argument1Json = this.Serialize(result.self);
+            pToExecute.Argument1Type = result.self.GetType().ToString();
+            pToExecute.Argument2Json = this.Serialize(result.message);
+            pToExecute.Argument2Type = result.message.GetType().ToString();
             pToExecute.ResultType = "Nasdan.Core.Representation._N`1";
-            var query = this.Neo4j.Client.Cypher
-                 //Nodes: _I, _S, ImageMessage, _P
-                 .Create($"(i:_I {{iFrame}})")
-                 .Create($"(m:ImageMessage {{msg}})")
-                 .Create($"(s:_S)")
+            var query2 = this.Neo4j.Client.Cypher
                  .Create($"(p:_P {{pToExecute}})")
                  .WithParams(new { iFrame, msg, pToExecute })
-                 //Edges
-                 .Create("(i)-[:_L]->(m)")
-                 .Create("(s)<-[:_Q]-(m)")
-                 .Create("(s)-[:_L]->(p)")
+                 //Edges                 
+                 .Create("(s)-[p:_P {{pToExecute}}]->(m)")
+                 .WithParams(new { pToExecute })
                  .Return(p => p.As<Neo4jClient.Node<_P>>());
-            var _pNode = query.Results.Single();
-            var _n = ((Neo4jClient.Node<_P>)_pNode).to_N<_P>();
-            SelfActor.Tell(_n);
+            var _pNode = query2.Results.Single();
+            var _p = ((Neo4jClient.Node<_P>)_pNode).to_N<_P>();
+
+            SelfActor.Tell(_p);
         }
 
 

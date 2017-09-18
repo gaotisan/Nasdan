@@ -29,8 +29,7 @@ namespace Nasdan.Core.Senses
                     case "~/images/inputs/colors-red.gif":
                     case "~/images/inputs/colors-orange.gif":
                     case "~/images/inputs/colors-white.gif":
-                    case "~/images/inputs/colors-green.gif":
-                        this.Neo4j.CreateGraph("(n:SELF)-[:PROCESS {Order:2}]->(img " + ":?)-[:IS]->(img :?)");
+                    case "~/images/inputs/colors-green.gif":                        
                         break;
                 }
             }
