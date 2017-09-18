@@ -99,56 +99,25 @@ namespace Nasdan.Core.Actors
                     {
                         //2º) El metodo invocado devuelve un tipo Node<T>                        
                         var reference = result.GetType().GetProperty("Reference").GetValue(result);
-                        long id = (long)reference.GetType().GetProperty("Id").GetValue(reference);
-                        //.PropertyType.GetProperty("Id").GetValue(result);                                         
+                        long resultId = (long)reference.GetType().GetProperty("Id").GetValue(reference);                                      
+                        //DELETE _P (Process)
                         var query = this.Neo4j.Client.Cypher
-                        .Match($"(p)")
+                        .OptionalMatch($"(p:_P)<-[l:_L]-(s:_S)")
                         .Where($"ID(p) = {{idParam}}")
                         .WithParam("idParam", nP.Reference.Id)
-                        .Return(p => p.As<Neo4jClient.Node<_P>>());
-                        var _pNode = query.Results.Single();
-
-
+                        .Delete("l,p")
+                        .Return(s => s.As<Neo4jClient.Node<_S>>()); //GET SELF   
+                        var self = query.Results.Single();
+                        //Connect new Graph (result) with SELF
                         this.Neo4j.Client.Cypher
-                        .OptionalMatch($"(p:_P)-[r]-()")
-                        .Where($"ID(p) = {{idParam}}")
-                        .WithParam("idParam", nP.Reference.Id)
-                        .Delete("r,p")
-                        .ExecuteWithoutResults();
-                        /* 
-                        this.Neo4j.Client.Cypher
-                        .Match("(p:_P)")
-                        .OptionalMatch("(p)-[r]-()")
-                        .Where($"ID(p) = {{idParam}}")
-                        .WithParam("idParam", nP.Reference.Id)
-                        .Delete("r, p")
-                        .ExecuteWithoutResults();
-                        */
-                        /* 
-                        this.Neo4j.Client.Cypher
-                        .Match("(p:_P)")                                                
-                        .Delete("p")
-                        .ExecuteWithoutResults();
-                        */
-
-
-                        /* 
-                        this.Neo4j.Client.Cypher
-                        .Match($"(p)")
-                        .Where($"ID(p) = {{idParam}}")
-                        .WithParam("idParam", nP.Reference.Id)
-                        .Delete("(p)")
-                        .ExecuteWithoutResults();
-                        */
-                        /* 
+                        .Match($"(s:_S)")
+                        .Where($"ID(s) = {{idParam1}}")
+                        .WithParam("idParam1", self.Reference.Id)
                         .Match($"(n)")
-                        .Where($"ID(n) = {{idResult}}")
-                        .WithParam("idResult", id)
-                        .Create($"(s)-[:_P {{_pSerialized}}]->(n)")
-                        .WithParam("_pSerialized", p)
-                        .Create($"(s)-[:_Q]->(n)")
-                        .ExecuteWithoutResults();                                                                                                                                             
-                        */
+                        .Where($"ID(n) = {{idParam2}}")
+                        .WithParam("idParam2",resultId)
+                        .Create("(s)-[r:_Q]->(n)")
+                        .ExecuteWithoutResults();                        
                     }
                     else
                     {
