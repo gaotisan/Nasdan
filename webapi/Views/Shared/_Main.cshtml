@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+     <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap core CSS -->
+     <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />        
+        <link rel="stylesheet" href="~/css/blog.css">
+        <link rel="stylesheet" href="~/css/terminal.css">
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />        
+        <link rel="stylesheet" href="~/css/blog.min.css" asp-append-version="true" />
+    </environment>         
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+          <div class="navbar-header">
+          <h2 class="masthead-brand" style="color:white"><img src="~/images/logo-nasdan-transparent2.png" width="80px" height="80px" />Nasdan</h2>
+        </div>
+           
+        <nav class="blog-nav navbar-right">
+          <a class="blog-nav-item  @ViewData["IAActive"]" href="/IA/Seeing" style="font-size: 18pt">IA</a>
+          <a class="blog-nav-item @ViewData["BlogActive"]" href="/Blog" style=" font-size:18pt">Blog</a>
+        </nav>
+      </div>
+    </div>
+    
+     
+     @RenderBody()            
+    
+        
+  
+    <footer class="blog-footer">
+      <p>© @DateTime.Now.Year Nasdan project by <a href="https://www.linkedin.com/in/santiago-ochoa-ceresuela-67930b38/" target="_blank">Gaotisan</a></p>
+      <p>
+        <!--<a href="#">Back to top</a>-->
+      </p>
+    </footer>
+  
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+                <script src="~/js/terminal.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+    
+  </body>
+</html>
+
