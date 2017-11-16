@@ -10,3 +10,15 @@ C:\github\Nasdan\webapi\master\obj\Debug\netcoreapp2.0\Nasdan-webapi.AssemblyInf
 C:\github\Nasdan\webapi\master\obj\Debug\netcoreapp2.0\Nasdan-webapi.AssemblyInfo.cs
 C:\github\Nasdan\webapi\master\obj\Debug\netcoreapp2.0\Nasdan-webapi.dll
 C:\github\Nasdan\webapi\master\obj\Debug\netcoreapp2.0\Nasdan-webapi.pdb
+c:\github\Nasdan\webapi\obj\Debug\netcoreapp2.0\Nasdan-webapi.csproj.CoreCompileInputs.cache
+c:\github\Nasdan\webapi\obj\Debug\netcoreapp2.0\Nasdan-webapi.AssemblyInfoInputs.cache
+c:\github\Nasdan\webapi\obj\Debug\netcoreapp2.0\Nasdan-webapi.AssemblyInfo.cs
+c:\github\Nasdan\webapi\obj\Debug\netcoreapp2.0\Nasdan-webapi.dll
+c:\github\Nasdan\webapi\obj\Debug\netcoreapp2.0\Nasdan-webapi.pdb
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-webapi.deps.json
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-webapi.runtimeconfig.json
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-webapi.runtimeconfig.dev.json
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-webapi.dll
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-webapi.pdb
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-core.dll
+c:\github\Nasdan\webapi\bin\Debug\netcoreapp2.0\Nasdan-core.pdb

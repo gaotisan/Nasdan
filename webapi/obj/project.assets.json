@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "Google.Protobuf/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -2620,6 +2645,33 @@
           "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll": {}
         }
       },
+      "Microsoft.VisualBasic/10.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.BrowserLink/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2668,6 +2720,44 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "Neo4jClient/2.0.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.1",
+          "Microsoft.VisualBasic": "10.0.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Collections": "4.0.11",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.ComponentModel": "4.0.1",
+          "System.ComponentModel.Annotations": "4.1.0",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Net.Http": "4.1.0",
+          "System.Net.Primitives": "4.0.11",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Text.Encoding": "4.0.11",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Neo4jClient.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Neo4jClient.dll": {}
         }
       },
       "NETStandard.Library/2.0.0": {
@@ -2733,6 +2823,34 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Proto.Actor/0.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "NETStandard.Library": "1.6.1",
+          "Proto.Mailbox": "0.1.9",
+          "System.ValueTuple": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.5/Proto.Actor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Proto.Actor.dll": {}
+        }
+      },
+      "Proto.Mailbox/0.1.9": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/Proto.Mailbox.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Proto.Mailbox.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -3356,6 +3474,49 @@
             "rid": "unix"
           },
           "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.Process/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -4746,10 +4907,38 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "Nasdan-core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Neo4jclient": "2.0.0.8",
+          "Proto.Actor": "0.1.9",
+          "System.Diagnostics.Process": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Nasdan-core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nasdan-core.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Google.Protobuf/3.2.0": {
+      "sha512": "qwqIqIWLdQOD/uyh5Kitz1R1RovK1cF4VgBVbVZEHAKLmLqKZJ2Lgx8KGeD8Sua5+2IvKEzNEqv7dHFcwA9Ueg==",
+      "type": "package",
+      "path": "google.protobuf/3.2.0",
+      "files": [
+        "google.protobuf.3.2.0.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.xml"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -7307,6 +7496,49 @@
         "microsoft.rest.clientruntime.azure.nuspec"
       ]
     },
+    "Microsoft.VisualBasic/10.0.1": {
+      "sha512": "HpNyOf/4Tp2lh4FyywB55VITk0SqVxEjDzsVDDyF1yafDN6Bq18xcHowzCPINyYHUTgGcEtmpYiRsFdSo0KKdQ==",
+      "type": "package",
+      "path": "microsoft.visualbasic/10.0.1",
+      "files": [
+        "Microsoft.VisualBasic.10.0.1.nupkg.sha512",
+        "Microsoft.VisualBasic.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.VisualBasic.dll",
+        "lib/netstandard1.3/Microsoft.VisualBasic.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.VisualBasic.dll",
+        "ref/netcore50/Microsoft.VisualBasic.xml",
+        "ref/netcore50/de/Microsoft.VisualBasic.xml",
+        "ref/netcore50/es/Microsoft.VisualBasic.xml",
+        "ref/netcore50/fr/Microsoft.VisualBasic.xml",
+        "ref/netcore50/it/Microsoft.VisualBasic.xml",
+        "ref/netcore50/ja/Microsoft.VisualBasic.xml",
+        "ref/netcore50/ko/Microsoft.VisualBasic.xml",
+        "ref/netcore50/ru/Microsoft.VisualBasic.xml",
+        "ref/netcore50/zh-hans/Microsoft.VisualBasic.xml",
+        "ref/netcore50/zh-hant/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/Microsoft.VisualBasic.dll",
+        "ref/netstandard1.1/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/de/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/es/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/fr/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/it/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/ja/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/ko/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/ru/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/zh-hans/Microsoft.VisualBasic.xml",
+        "ref/netstandard1.1/zh-hant/Microsoft.VisualBasic.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._"
+      ]
+    },
     "Microsoft.VisualStudio.Web.BrowserLink/2.0.0": {
       "sha512": "+iLi1BBW/52xtKPYITk1jJSD0sJCHYy5dbOjSQZiZjnqPGjuo2LAfhz//rYAzYbyKq+kH1CO763ViGcdsMvFbA==",
       "type": "package",
@@ -7390,6 +7622,24 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Neo4jClient/2.0.0.8": {
+      "sha512": "76N9LeRRe6QAwYONimBC3u4S0/ABNCebBKZe/H3KpJ8lrYDVP04R8bdlzO4RVryAhGc8qHN7y+9ndyx51y1JZg==",
+      "type": "package",
+      "path": "neo4jclient/2.0.0.8",
+      "files": [
+        "lib/dotnet/Neo4jClient.dll",
+        "lib/dotnet/Neo4jClient.pdb",
+        "lib/dotnet/Neo4jClient.xml",
+        "lib/net45/Neo4jClient.dll",
+        "lib/net45/Neo4jClient.pdb",
+        "lib/net45/Neo4jClient.xml",
+        "lib/netstandard1.0/Neo4jClient.dll",
+        "lib/netstandard1.0/Neo4jClient.pdb",
+        "lib/netstandard1.0/Neo4jClient.xml",
+        "neo4jclient.2.0.0.8.nupkg.sha512",
+        "neo4jclient.nuspec"
       ]
     },
     "NETStandard.Library/2.0.0": {
@@ -7555,6 +7805,28 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "Proto.Actor/0.1.9": {
+      "sha512": "tbJ7uC2opolud7jzxEmoHbJ7AT8efyWFxBZciIEgjpGNAgnMNgka4Fl02qxIMceVzysasArMUJqRzEzYPOrTGQ==",
+      "type": "package",
+      "path": "proto.actor/0.1.9",
+      "files": [
+        "lib/net452/Proto.Actor.dll",
+        "lib/netstandard1.5/Proto.Actor.dll",
+        "proto.actor.0.1.9.nupkg.sha512",
+        "proto.actor.nuspec"
+      ]
+    },
+    "Proto.Mailbox/0.1.9": {
+      "sha512": "NzpLXwo03dT41NQg+0KQbpsJ9m69FDrc3CvuWzWNddlXy43sxhGck76plkprA4A/8QAvPshz4UoIDdLF3sIgEg==",
+      "type": "package",
+      "path": "proto.mailbox/0.1.9",
+      "files": [
+        "lib/net452/Proto.Mailbox.dll",
+        "lib/netstandard1.5/Proto.Mailbox.dll",
+        "proto.mailbox.0.1.9.nupkg.sha512",
+        "proto.mailbox.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -8795,6 +9067,61 @@
         "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll",
         "system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512",
         "system.diagnostics.fileversioninfo.nuspec"
+      ]
+    },
+    "System.Diagnostics.Process/4.3.0": {
+      "sha512": "GhMXDhBOPYgFst7n3SEV3QihgDhJOHVAW/Ughd8E9Us4nXmgLt3z+z8ROyTr9SQtrYAjp/FXPkR3wuj67CI4OA==",
+      "type": "package",
+      "path": "system.diagnostics.process/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.Process.dll",
+        "lib/net461/System.Diagnostics.Process.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.Process.dll",
+        "ref/net461/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/System.Diagnostics.Process.dll",
+        "ref/netstandard1.4/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hant/System.Diagnostics.Process.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net461/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.diagnostics.process.4.3.0.nupkg.sha512",
+        "system.diagnostics.process.nuspec"
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
@@ -12524,12 +12851,18 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "Nasdan-core/1.0.0": {
+      "type": "project",
+      "path": "../core/Nasdan-core.csproj",
+      "msbuildProject": "../core/Nasdan-core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.0",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Nasdan-core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12561,7 +12894,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\github\\Nasdan\\core\\Nasdan-core.csproj": {
+              "projectPath": "c:\\github\\Nasdan\\core\\Nasdan-core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

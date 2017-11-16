@@ -17,7 +17,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\core\master\Nasdan-core.csproj" />
+    <ProjectReference Include="..\core\Nasdan-core.csproj" />
   </ItemGroup>
 
 </Project>
